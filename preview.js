@@ -123,10 +123,10 @@
         const rect = hero.getBoundingClientRect();
         const x = (event.clientX - rect.left) / rect.width * 2 - 1;
         const y = (event.clientY - rect.top) / rect.height * 2 - 1;
-        hero.style.setProperty('--hero-shift-x', (x * 7).toFixed(1) + 'px');
-        hero.style.setProperty('--hero-shift-y', (y * 6).toFixed(1) + 'px');
-        hero.style.setProperty('--hero-art-x', (x * -4).toFixed(1) + 'px');
-        hero.style.setProperty('--hero-art-y', (y * -4).toFixed(1) + 'px');
+        hero.style.setProperty('--hero-shift-x', (x * 15).toFixed(1) + 'px');
+        hero.style.setProperty('--hero-shift-y', (y * 12).toFixed(1) + 'px');
+        hero.style.setProperty('--hero-art-x', (x * -9).toFixed(1) + 'px');
+        hero.style.setProperty('--hero-art-y', (y * -8).toFixed(1) + 'px');
         if (heroCta) {
           const buttonRect = heroCta.getBoundingClientRect();
           const inside = event.clientX >= buttonRect.left && event.clientX <= buttonRect.right &&
