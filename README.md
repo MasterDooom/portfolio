@@ -20,6 +20,9 @@ The source and deployment workflow are already in this repository. GitHub Pages 
 - `index.html` — page content, achievement cards and illustrative artwork.
 - `preview.css` — complete stylesheet; responsive layout, transitions and reveal animations.
 - `preview.js` — category filters, responsive navigation, scroll progress/reveals, and achievement detail panels.
+- `motion.css` / `motion.js` — expressive typography, floating composition, scroll-linked parallax, deeper reveals, card spotlight, and the animated timeline.
+
+The visual language is built around Syne display type, Instrument Serif accents and IBM Plex Mono labels, drawing on the reference's oversized type and layered motion without its heavier canvas/3D scene.
 - `CONTENT-GUIDE.md` — evidence checklist and writing prompts.
 - `DESIGN-NOTES.md` — design direction and animation principles.
 
