@@ -1,29 +1,26 @@
-# Beyond the Milestone — Achievement Portfolio
+# Personal Achievement Archive
 
-A cinematic + editorial portfolio draft for an English project. It includes an animated hero, an achievement archive, clickable achievement detail panels, selected work, a personal timeline and reflection prompts.
+A 90s-inspired monochrome portfolio draft built around a cinematic opener and a scroll-led achievement spotlight. The four achievements each have their own large visual composition: SASMO 8th rank, district tennis trophy, hackathon selection, and the medal collection.
 
 ## Live site
-
-After GitHub Pages is enabled and the Actions workflow succeeds:
 https://masterdooom.github.io/portfolio/
 
-## First-time publishing
+## What makes this version different
+- The achievement section is scrollytelling, not a grid of generic cards. The sticky spotlight changes as each entry crosses the viewport's focus zone.
+- A black, graphite and silver palette with CRT scanlines, strict grid lines and oversized display type.
+- Archivo Black headings, Space Grotesk body copy and IBM Plex Mono labels.
+- Lightweight, observer-triggered reveals and a single requestAnimationFrame scroll-progress update. No Three.js, no canvas loop, no scroll-smoothing hijack.
+- Respects `prefers-reduced-motion`; the page content remains readable even if JavaScript is unavailable.
 
-The source and deployment workflow are already in this repository. GitHub Pages itself is not yet enabled, so the first workflow currently stops at **Configure Pages**.
+## Files
+- `index.html` — all content and the four achievement scenes.
+- `preview.css` — theme, typography, responsive layouts and transitions.
+- `preview.js` — active achievement spotlight, reveal observer, progress line and mobile menu.
+- `CONTENT-GUIDE.md` — content/evidence checklist.
+- `DESIGN-NOTES.md` — original design notes.
 
-1. Open [Repository Pages settings](https://github.com/MasterDooom/portfolio/settings/pages).
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Open [Actions](https://github.com/MasterDooom/portfolio/actions), select **Deploy portfolio to GitHub Pages**, and rerun the latest failed run. Future pushes to `main` deploy automatically.
+## Personalise before submission
+Replace the illustrative graphics with photographs of your real medals and tennis trophy, and a redacted screenshot of the actual hackathon selection email. Add the SASMO certificate, exact competition year/category and hackathon name once verified. Add real project names and dated timeline entries. Never publish unredacted email addresses, phone numbers or private message content.
 
-## Editing the draft
-
-- `index.html` — page content, achievement cards and illustrative artwork.
-- `preview.css` — complete stylesheet; responsive layout, transitions and reveal animations.
-- `preview.js` — category filters, responsive navigation, scroll progress/reveals, and achievement detail panels.
-- `motion.css` / `motion.js` — expressive typography, floating composition, scroll-linked parallax, deeper reveals, card spotlight, and the animated timeline.
-
-The visual language is built around Syne display type, Instrument Serif accents and IBM Plex Mono labels, drawing on the reference's oversized type and layered motion without its heavier canvas/3D scene.
-- `CONTENT-GUIDE.md` — evidence checklist and writing prompts.
-- `DESIGN-NOTES.md` — design direction and animation principles.
-
-This is a static site. Viewing it does not require Node.js or npm; use VS Code Live Server for convenient local editing. All dates and descriptions are placeholders until verified. Replace the illustrations with authentic photographs and supporting evidence, and redact private information from screenshots or documents before submission.
+## Deploy
+Push changes to `main`; GitHub Actions publishes `index.html`, `preview.css` and `preview.js` through GitHub Pages.
