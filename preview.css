@@ -291,3 +291,9 @@ img,svg{display:block;max-width:100%}
  .reveal{opacity:1;transform:none}
  .hero-title>span{animation:none}
 }
+
+/* Content stays visible without JavaScript; motion is enabled only after observers initialise. */
+.reveal{opacity:1;transform:none}
+.motion-enabled .reveal{opacity:0;transform:translateY(22px)}
+.motion-enabled .reveal.is-visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.motion-enabled .reveal,.motion-enabled .reveal.is-visible{opacity:1;transform:none}}
