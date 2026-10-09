@@ -1,31 +1,21 @@
 # Content collection guide
 
-This is a working draft of an English-project achievement portfolio. All dates and details should be verified before submission.
+The site is now organised as a scroll-led achievement archive. The stage art is original vector/typographic artwork, not evidence. Replace it with real photographs/documents as they are collected.
 
-## Evidence to collect
+## Evidence to gather
+- **SASMO:** official certificate/result, exact year and category/level confirming the 8th rank.
+- **Tennis:** photograph of the actual district trophy, event name, tournament year and category/result.
+- **Hackathon:** event name, the exact selection stage, a redacted screenshot/PDF of the original selection email.
+- **Medals:** photographs of the actual medals and any award certificates; label each with its event and year.
+- **Projects:** choose 2–4 strongest projects and document the problem, your contribution, outcome and lesson.
+- **Timeline:** use verified dates and genuine turning points; do not invent chronology.
+- **Reflections:** one concrete challenge, what you did, what changed and what you would improve.
 
-- **Medals:** clear photos, award names, competition/organisation, year and category.
-- **SASMO:** original certificate or official result, exact level/category and year confirming the eighth-place result.
-- **Hackathon:** selection email and event name. Redact private addresses, phone numbers, tokens and unrelated email content.
-- **Tennis:** photo of the actual trophy, event/tournament name, year, category and result.
-- **Projects:** 2–4 strongest projects, what you built, your personal contribution, evidence and outcome.
-- **Leadership/extracurriculars:** role, responsibilities, duration and concrete contribution.
-- **Reflections:** a specific challenge, what you did, what changed and what you would do differently.
-
-## Suggested structure for each achievement
-
+## A useful structure for each achievement
 1. What happened?
-2. What was your contribution?
-3. What evidence verifies it?
-4. Why did it matter to you?
+2. What was your specific contribution?
+3. What evidence verifies the claim?
+4. Why did it matter?
 5. What did you learn?
 
-Keep the voice honest and specific. Do not invent dates, ranks or results. Use genuine photographs where possible; clearly mark any temporary illustration as a placeholder.
-
-## Before publishing
-
-- Replace all placeholders in the archive and timeline.
-- Verify competition names, dates and categories.
-- Blur/redact private information in screenshots and documents.
-- Check mobile layout, all links, keyboard navigation and reduced-motion behaviour.
-- Confirm that each achievement and claim is accurate.
+Keep writing accurate and specific. Do not invent dates, rankings, event names or outcomes. Redact private contact details and unrelated email content before publishing any documents.
