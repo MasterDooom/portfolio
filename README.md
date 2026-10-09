@@ -4,23 +4,23 @@ A cinematic + editorial portfolio draft for an English project. It includes an a
 
 ## Live site
 
-Once the GitHub Pages workflow completes successfully:
+After GitHub Pages is enabled and the Actions workflow succeeds:
 https://masterdooom.github.io/portfolio/
 
-## How publishing works
+## First-time publishing
 
-1. Push changes to `main`.
-2. GitHub Actions assembles the static page from `index.html`, `preview.js`, and the stylesheet segments under `.site-source/`.
-3. GitHub Actions publishes the site to GitHub Pages.
+The source and deployment workflow are already in this repository. GitHub Pages itself is not yet enabled, so the first workflow currently stops at **Configure Pages**.
 
-If deployment does not start, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. Then open **Actions** and rerun “Deploy portfolio to GitHub Pages”.
+1. Open [Repository Pages settings](https://github.com/MasterDooom/portfolio/settings/pages).
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Open [Actions](https://github.com/MasterDooom/portfolio/actions), select **Deploy portfolio to GitHub Pages**, and rerun the latest failed run. Future pushes to `main` deploy automatically.
 
 ## Editing the draft
 
-- `index.html` — all page content and achievement artwork placeholders.
-- `preview.css` is assembled during deployment from `.site-source/exact-css-01.part` through `exact-css-07.part`. Edit those CSS source segments, preserving their order.
-- `preview.js` — filters, responsive navigation, scroll reveal/progress and achievement detail panels.
+- `index.html` — page content, achievement cards and illustrative artwork.
+- `preview.css` — complete stylesheet; responsive layout, transitions and reveal animations.
+- `preview.js` — category filters, responsive navigation, scroll progress/reveals, and achievement detail panels.
 - `CONTENT-GUIDE.md` — evidence checklist and writing prompts.
 - `DESIGN-NOTES.md` — design direction and animation principles.
 
-The deployed version is deliberately static; you do not need Node.js or npm to view it. If developing locally, use a small static server or VS Code Live Server. All dates and descriptions are placeholders until they have been verified. Replace the illustrative artwork with real evidence and redact private information from email screenshots before submission.
+This is a static site. Viewing it does not require Node.js or npm; use VS Code Live Server for convenient local editing. All dates and descriptions are placeholders until verified. Replace the illustrations with authentic photographs and supporting evidence, and redact private information from screenshots or documents before submission.

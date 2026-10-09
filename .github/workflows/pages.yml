@@ -22,23 +22,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Assemble static site
         run: |
           mkdir -p _site
-          cp index.html preview.js _site/
-          cat .site-source/exact-css-01.part \
-              .site-source/exact-css-02.part \
-              .site-source/exact-css-03.part \
-              .site-source/exact-css-04.part \
-              .site-source/exact-css-05.part \
-              .site-source/exact-css-06.part \
-              .site-source/exact-css-07.part > _site/preview.css
+          cp index.html preview.css preview.js _site/
           touch _site/.nojekyll
       - name: Upload static site
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
       - name: Deploy
