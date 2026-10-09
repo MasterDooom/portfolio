@@ -111,4 +111,61 @@
     }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
     navSections.forEach(section => navObserver.observe(section));
   }
+
+  // Low-cost pointer interactions: parallax in the hero and a moving inspection light.
+  // Disabled on touch devices and when the visitor requests reduced motion.
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!reduceMotion && finePointer) {
+    const hero = $('.hero');
+    const heroCta = $('.hero-cta');
+    if (hero) {
+      hero.addEventListener('pointermove', event => {
+        const rect = hero.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width * 2 - 1;
+        const y = (event.clientY - rect.top) / rect.height * 2 - 1;
+        hero.style.setProperty('--hero-shift-x', (x * 7).toFixed(1) + 'px');
+        hero.style.setProperty('--hero-shift-y', (y * 6).toFixed(1) + 'px');
+        hero.style.setProperty('--hero-art-x', (x * -4).toFixed(1) + 'px');
+        hero.style.setProperty('--hero-art-y', (y * -4).toFixed(1) + 'px');
+        if (heroCta) {
+          const buttonRect = heroCta.getBoundingClientRect();
+          const inside = event.clientX >= buttonRect.left && event.clientX <= buttonRect.right &&
+                         event.clientY >= buttonRect.top && event.clientY <= buttonRect.bottom;
+          heroCta.style.setProperty('--cta-x', inside ? (((event.clientX - (buttonRect.left + buttonRect.width / 2)) / buttonRect.width) * 7).toFixed(1) + 'px' : '0px');
+          heroCta.style.setProperty('--cta-y', inside ? (((event.clientY - (buttonRect.top + buttonRect.height / 2)) / buttonRect.height) * 5).toFixed(1) + 'px' : '0px');
+        }
+      }, { passive: true });
+      hero.addEventListener('pointerleave', () => {
+        ['--hero-shift-x','--hero-shift-y','--hero-art-x','--hero-art-y'].forEach(name => hero.style.setProperty(name, '0px'));
+        if (heroCta) { heroCta.style.setProperty('--cta-x', '0px'); heroCta.style.setProperty('--cta-y', '0px'); }
+      }, { passive: true });
+    }
+
+    if (spotlight) {
+      spotlight.addEventListener('pointermove', event => {
+        const rect = spotlight.getBoundingClientRect();
+        spotlight.style.setProperty('--light-x', ((event.clientX - rect.left) / rect.width * 100).toFixed(1) + '%');
+        spotlight.style.setProperty('--light-y', ((event.clientY - rect.top) / rect.height * 100).toFixed(1) + '%');
+      }, { passive: true });
+    }
+    $$('.work-row').forEach(row => row.addEventListener('pointermove', event => {
+      const rect = row.getBoundingClientRect();
+      row.style.setProperty('--row-x', (event.clientX - rect.left).toFixed(1) + 'px');
+      row.style.setProperty('--row-y', (event.clientY - rect.top).toFixed(1) + 'px');
+    }, { passive: true }));
+  }
+
+  // Give the timeline a single active beat as entries pass through the reading line.
+  const timelineEntries = $$('.timeline-entry');
+  if ('IntersectionObserver' in window && timelineEntries.length) {
+    const timelineObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          timelineEntries.forEach(item => item.classList.toggle('is-active', item === entry.target));
+        }
+      });
+    }, { rootMargin: '-38% 0px -46% 0px', threshold: 0 });
+    timelineEntries.forEach(entry => timelineObserver.observe(entry));
+  }
+
 })();
