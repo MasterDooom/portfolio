@@ -1,0 +1,57 @@
+ition: transform .35s cubic-bezier(.22,1,.36,1), background .25s ease; }
+.achievement-card__button:hover .card-open { transform: rotate(45deg); background: var(--orange); }
+.achievement-card__meta { display: flex; justify-content: space-between; gap: 16px; padding: 17px 0 10px; color: #77736a; font: 8px var(--mono); letter-spacing: .065em; }
+.achievement-card h3 { font: 500 clamp(24px, 2.5vw, 34px)/1.1 var(--serif); letter-spacing: -.035em; margin: 0 0 6px; transition: color .25s ease; }
+.achievement-card__button:hover h3 { color: var(--orange-dark); }
+.achievement-card p { font-size: 12px; color: #747066; margin: 0; }
+.achievement-card__footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line-paper); margin-top: 20px; padding: 11px 0 3px; font: 8px var(--mono); letter-spacing: .075em; color: #77736a; }
+.achievement-card__footer svg { transition: transform .25s ease; }
+.achievement-card__button:hover .achievement-card__footer svg { transform: translateX(5px); color: var(--orange-dark); }
+.achievement-art { width: 100%; height: 100%; position: relative; overflow: hidden; }
+.sasmo-art { display: flex; flex-direction: column; justify-content: center; padding: 42px clamp(24px,4vw,56px); background: radial-gradient(ellipse at 78% 35%, rgba(217,140,86,.33), transparent 40%), #cfc4b1; color: #24221d; }
+.sasmo-art__halo { position: absolute; width: min(63%,300px); aspect-ratio: 1; border: 1px solid rgba(34,33,28,.24); border-radius: 50%; right: 7%; top: 14%; }
+.sasmo-art__halo::before, .sasmo-art__halo::after { content: ''; position: absolute; inset: 12%; border: 1px dashed rgba(34,33,28,.2); border-radius: 50%; }
+.sasmo-art__halo::after { inset: 24%; }
+.sasmo-art__top, .sasmo-art__bottom { font: 9px var(--mono); letter-spacing: .09em; z-index: 2; }
+.sasmo-art__number { position: relative; z-index: 2; font: 500 clamp(105px, 14vw, 185px)/.92 var(--serif); letter-spacing: -.1em; margin: 18px 0 20px; }
+.sasmo-art__number span { font: italic 25px var(--serif); display: inline-block; vertical-align: top; padding-top: 9px; margin-left: 8px; letter-spacing: 0; }
+.sasmo-art__rule { height: 1px; background: rgba(20,21,18,.35); width: 70%; margin-bottom: 12px; z-index: 2; }
+.sasmo-art__asterisk { position: absolute; color: var(--orange-dark); right: 15%; bottom: 15%; z-index: 2; }
+.tennis-art { background: linear-gradient(145deg, #9eaf9c, #d2dfc9 65%, #bbcab9); }
+.tennis-art__glow { position: absolute; width: 280px; height: 280px; top: -30%; right: -15%; border-radius: 50%; background: rgba(255,255,255,.33); filter: blur(15px); }
+.court-art { position: absolute; inset: 0; perspective: 500px; display: grid; place-items: center; }
+.court-art__court { position: absolute; width: 74%; height: 66%; top: 17%; left: 13%; transform: rotateX(18deg) rotateZ(-7deg); border: 2px solid #f0f0d6; background: linear-gradient(130deg, #51715e, #8cad86); box-shadow: 14px 24px 50px rgba(37,62,45,.22); }
+.court-art__court i { position: absolute; background: rgba(241,242,221,.86); }
+.court-art__court i:nth-child(1) { left: 50%; width: 2px; top: 0; bottom: 0; }
+.court-art__court i:nth-child(2) { left: 0; right: 0; top: 50%; height: 2px; }
+.court-art__court i:nth-child(3) { left: 18%; right: 18%; top: 25%; height: 1px; }
+.court-art__court i:nth-child(4) { left: 18%; right: 18%; bottom: 25%; height: 1px; }
+.court-art__court b { position: absolute; left: 50%; top: 50%; height: 8px; width: 140%; transform: translate(-50%,-50%); background: repeating-linear-gradient(90deg, rgba(245,240,222,.55) 0 1px, transparent 1px 5px); border-top: 2px solid #f8f0d7; border-bottom: 2px solid #f8f0d7; }
+.court-art__ball { position: absolute; width: 74px; height: 74px; right: 20%; top: 13%; border-radius: 50%; background: radial-gradient(circle at 28% 24%, #e0eb6b, #b3c43f 65%, #718b39); box-shadow: 0 17px 24px rgba(34,56,36,.25); }
+.court-art__ball::before, .court-art__ball::after { content: ''; position: absolute; width: 42px; height: 82px; border: 2px solid rgba(251,249,211,.86); border-radius: 50%; top: -4px; left: 13px; transform: rotate(30deg); }
+.court-art__ball::after { transform: rotate(-30deg); }
+.court-art__label { position: absolute; left: 8%; bottom: 9%; color: #203528; font: 10px/1.5 var(--mono); letter-spacing: .08em; }
+.court-art__label span { color: #536a51; }
+.tennis-art__trophy { position: absolute; z-index: 4; width: 48%; height: 75%; top: 5%; left: 33%; filter: drop-shadow(10px 17px 12px rgba(37,62,45,.27)); transition: transform .45s cubic-bezier(.22,1,.36,1); }
+.tennis-art__trophy .trophy-art { width: 100%; height: 100%; }
+.achievement-card__button:hover .tennis-art__trophy { transform: translateY(-5px) rotate(2deg); }
+.hack-art { display: grid; place-items: center; background: radial-gradient(circle at 20% 20%, #e7ece8, #c8d2d4 72%); }
+.hack-art__window { width: 76%; height: 69%; background: #f5f2eb; box-shadow: 0 25px 55px rgba(30,44,43,.16); transform: rotate(-3deg); transition: transform .5s cubic-bezier(.22,1,.36,1); }
+.achievement-card__button:hover .hack-art__window { transform: rotate(0deg) translateY(-5px); }
+.hack-art__bar { height: 30px; display: flex; align-items: center; padding: 0 10px; gap: 4px; border-bottom: 1px solid #ded9cf; color: #84877e; font: 7px var(--mono); }
+.hack-art__bar i { width: 5px; height: 5px; border-radius: 50%; background: #d98c56; }
+.hack-art__bar i:nth-child(2) { background: #aeb9a9; }.hack-art__bar i:nth-child(3) { background: #c6c8c4; }
+.hack-art__bar span { margin-left: 7px; }
+.hack-art__content { position: relative; padding: 20px 8%; }
+.hack-art__eyebrow { color: #8b8b81; font: 7px var(--mono); letter-spacing: .09em; }
+.hack-art__line { height: 5px; background: #dedbd2; width: 70%; margin: 10px 0; }.hack-art__line--long { width: 92%; height: 10px; background: #343b36; margin-top: 15px; }.hack-art__line--mid { width: 79%; }.hack-art__line--short { width: 42%; }
+.hack-art__stamp { width: 80px; height: 80px; position: absolute; right: 8%; top: 44px; border: 1px solid #49745a; color: #49745a; display: grid; place-items: center; align-content: center; gap: 5px; transform: rotate(10deg); font: 8px var(--mono); letter-spacing: .07em; background: rgba(245,242,235,.6); }
+.medal-collection-art { background: radial-gradient(ellipse at 55% 45%, #ead2a0, #d6bb8d 60%, #bd9f72); }
+.medal-collection-art > .medal-art { position: absolute; width: 76%; height: 96%; left: 12%; top: 0; transform: rotate(-7deg); filter: drop-shadow(8px 15px 12px rgba(65,42,17,.22)); }
+.medal-collection-art__flare { position: absolute; inset: 0; background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.18) 48%, transparent 64%); }
+.medal-mini { position: absolute; width: 33%; height: 42%; bottom: 3%; left: 6%; transform: rotate(-22deg); filter: drop-shadow(3px 8px 5px rgba(65,42,17,.22)); }
+.medal-art--compact { width: 100%; height: 100%; }
+.art-caption { position: absolute; left: 16px; bottom: 15px; z-index: 5; font: 8px var(--mono); letter-spacing: .1em; color: rgba(20,21,18,.68); }
+.archive-note { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; gap: 18px; align-items: center; margin-top: 63px; border-top: 1px solid var(--line-paper); border-bottom: 1px solid var(--line-paper); padding: 24px 0; }
+.archive-note__icon { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid rgba(20,21,18,.2); color: var(--orange-dark); border-radius: 50%; }
+.archive-note p { margin: 0; color: #5e5a50; font-size: 12px; line-height: 1.75; max-width: 690px; }.archive-note p strong { color: var(--ink); }
