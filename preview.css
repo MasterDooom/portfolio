@@ -399,3 +399,78 @@ a:focus-visible, button:focus-visible { outline: 1px solid var(--phosphor); outl
   .work-row:before, .work-row:after { transition: none; }
   .timeline-entry.is-active .timeline-marker { animation: none; }
 }
+
+
+/* Visible motion pass: sharper reveals on scroll; no extra runtime or animation library. */
+@keyframes title-in {
+  0% { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(90px) skewY(7deg); }
+  72% { opacity: 1; clip-path: inset(0 0 0 0); transform: translateY(-4px) skewY(-.5deg); }
+  100% { opacity: 1; clip-path: inset(0 0 0 0); transform: translateY(0) skewY(0); }
+}
+@keyframes spotlight-enter {
+  0% { clip-path: inset(0 100% 0 0); transform: translateX(-22px) scale(1.045); filter: brightness(1.5); }
+  72% { clip-path: inset(0 0 0 0); transform: translateX(0) scale(1); filter: brightness(1.08); }
+  100% { clip-path: inset(0); transform: translateX(0) scale(1); filter: brightness(1); }
+}
+@keyframes achievement-heading-in {
+  0% { opacity: .2; transform: translateY(28px) skewY(2deg); filter: blur(4px); }
+  70% { opacity: 1; transform: translateY(-3px) skewY(0); filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) skewY(0); filter: blur(0); }
+}
+@keyframes archive-object-pop {
+  0% { opacity: 0; transform: translateY(24px) scale(.9); }
+  75% { opacity: 1; transform: translateY(-3px) scale(1.015); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes live-dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(185,197,179,.36); }
+  50% { box-shadow: 0 0 0 6px rgba(185,197,179,0); }
+}
+@keyframes scanning-line {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(240%); }
+}
+
+/* Scroll reveals have a little more travel and a clear soft focus-to-sharp finish. */
+.motion-enabled .reveal { opacity: 0; transform: translateY(42px); filter: blur(4px); }
+.motion-enabled .reveal.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+.section-heading.reveal .heading-row h2 {
+  clip-path: inset(0 0 100% 0);
+  transform: translateY(24px);
+  opacity: .35;
+  transition: clip-path .8s cubic-bezier(.16,1,.3,1) .08s, transform .8s cubic-bezier(.16,1,.3,1) .08s, opacity .45s ease .08s;
+}
+.section-heading.reveal.is-visible .heading-row h2 { clip-path: inset(0); transform: translateY(0); opacity: 1; }
+
+/* Each step switch gets a visible editorial wipe; the text catches up just after the artwork. */
+.spotlight-art.is-active { animation: spotlight-enter .78s cubic-bezier(.16,1,.3,1) both; }
+.achievement-step.is-current h3 { animation: achievement-heading-in .62s cubic-bezier(.16,1,.3,1) both; }
+.achievement-step.is-current .step-result { animation: archive-object-pop .65s cubic-bezier(.16,1,.3,1) .08s both; }
+.achievement-step.is-current .step-copy { animation: archive-object-pop .55s ease .15s both; }
+.spotlight-live i { animation: live-dot-pulse 1.7s ease-out infinite; }
+.hero-footer-line { position: relative; overflow: hidden; }
+.hero-footer-line:after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 100%;
+  background: #aeb7ad;
+  opacity: .8;
+  animation: scanning-line 3s ease-in-out infinite;
+}
+.hero:hover .hero-ring--two { opacity: .9; border-color: rgba(220,225,220,.48); animation-duration: 18s; }
+.hero:hover .hero-orbit-dot { transform: scale(1.3); }
+.work-row:before { background: radial-gradient(420px circle at var(--row-x, 50%) var(--row-y, 50%), rgba(195,201,192,.16), transparent 78%); }
+.work-row:hover { border-bottom-color: #848d85; }
+.spotlight:hover:after { opacity: 1; background-position: center, 110% 0; }
+.timeline-entry.is-active { transform: translateX(8px); }
+.timeline-entry.is-active .timeline-marker { animation: archive-marker-pulse .8s ease-out 1, live-dot-pulse 1.7s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-footer-line:after, .spotlight-live i { animation: none !important; }
+  .motion-enabled .reveal, .motion-enabled .reveal.is-visible { opacity: 1; transform: none; filter: none; }
+  .section-heading.reveal .heading-row h2 { clip-path: none; transform: none; opacity: 1; transition: none; }
+  .spotlight-art.is-active, .achievement-step.is-current h3,
+  .achievement-step.is-current .step-result, .achievement-step.is-current .step-copy { animation: none !important; }
+  .timeline-entry.is-active { transform: none; }
+}
