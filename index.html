@@ -2,84 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b0d0f" />
-  <meta name="description" content="A personal archive of achievements, ideas, and growth." />
-  <title>Beyond the Milestone — Personal Achievement Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080909" />
+  <meta name="description" content="A personal achievement archive: mathematics, sport, innovation, and the work behind each milestone." />
+  <title>Personal Archive — The Work Speaks</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="preview.css" />
-  <link rel="stylesheet" href="motion.css" />
 </head>
 <body>
-  <div class="site-shell">
-    <div class="read-progress" id="readProgress"></div>
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Back to top"><span class="wordmark__symbol">b.</span><span class="wordmark__text">BEYOND THE<br/>MILESTONE</span></a>
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#archive" class="is-active">Archive<span></span></a><a href="#projects">Selected work<span></span></a><a href="#journey">The journey<span></span></a><a href="#reflections">Reflections<span></span></a>
-      </nav>
-      <a class="header-index" href="#reflections"><span class="header-index__dot"></span> PERSONAL ARCHIVE <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-      <button class="mobile-menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    </header>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"><a href="#archive">Archive <span>↗</span></a><a href="#projects">Selected work <span>↗</span></a><a href="#journey">The journey <span>↗</span></a><a href="#reflections">Reflections <span>↗</span></a></nav>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Personal archive home"><span class="brand-mark">W/</span><span class="brand-copy">PERSONAL<br>ARCHIVE_001</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#achievements">THE RECORD</a><a href="#work">SELECTED WORK</a><a href="#timeline">TIMELINE</a><a href="#reflections">NOTES</a>
+    </nav>
+    <div class="system-status"><span class="status-dot"></span> SYSTEM ONLINE <span class="status-divider">/</span> 2026</div>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"><a href="#achievements">THE RECORD <span>↘</span></a><a href="#work">SELECTED WORK <span>↘</span></a><a href="#timeline">TIMELINE <span>↘</span></a><a href="#reflections">NOTES <span>↘</span></a></nav>
 
-    <main>
-      <section class="hero dark-section" id="top">
-        <div class="hero-grain"></div><div class="hero-orb hero-orb--one"></div><div class="hero-orb hero-orb--two"></div><div class="hero-grid-line hero-grid-line--v"></div><div class="hero-grid-line hero-grid-line--h"></div>
-        <div class="hero-copy">
-          <div class="eyebrow hero-eyebrow js-reveal"><span class="eyebrow__rule"></span> A PERSONAL ARCHIVE <span class="eyebrow__year">VOL. 01 — 2026</span></div>
-          <h1 class="hero-title"><span class="hero-title__line"><span>Beyond the</span></span><span class="hero-title__line hero-title__line--serif"><span>milestone<span class="hero-title__period">.</span></span></span></h1>
-          <p class="hero-description js-reveal">A living archive of the work, discipline and curiosity behind each achievement.</p>
-          <div class="hero-actions js-reveal"><a href="#archive" class="button button--light">Explore the archive <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M7 7h10v10"/></svg></a><span class="hero-note">ACHIEVEMENTS · IDEAS · GROWTH</span></div>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-background-grid"></div><div class="hero-scanline"></div>
+      <div class="hero-meta"><span>[ PERSONAL RECORD / VOL. 01 ]</span><span>ACADEMIC · SPORT · INNOVATION</span></div>
+      <div class="hero-content">
+        <div class="eyebrow reveal"><span class="eyebrow-line"></span> AN ARCHIVE OF THE WORK</div>
+        <h1 class="hero-title"><span>THE WORK</span><span class="hero-title-light">SPEAKS<span class="blink">_</span></span></h1>
+        <div class="hero-lower reveal">
+          <p>A record of the things worth remembering — the rank, the trophy, the selected idea, and the discipline behind them.</p>
+          <a class="hero-cta" href="#achievements"><span class="cta-index">01</span><span>SCROLL THE RECORD</span><span class="cta-arrow">↘</span></a>
         </div>
-        <div class="hero-art">
-          <div class="hero-art__backplate"></div><div class="hero-art__orbit"></div>
-          <div class="hero-sticker hero-sticker--top"><span>FIELD NOTES</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2m0-14.2L4.9 19.1"/></svg><span>NO. 001</span></div>
-          <div class="hero-art__medal"><svg class="medal-art" viewBox="0 0 320 330" role="img" aria-label="Medal illustration"><defs><linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b85b39"/><stop offset=".46" stop-color="#e7a16f"/><stop offset="1" stop-color="#8c3a2d"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b4"/><stop offset=".25" stop-color="#b8802d"/><stop offset=".48" stop-color="#f8d783"/><stop offset=".72" stop-color="#97601e"/><stop offset="1" stop-color="#edc875"/></linearGradient></defs><path d="M105 20h45l10 135-54-24z" fill="url(#ribbon)"/><path d="M170 20h45l-2 111-53 24z" fill="#2d5147"/><circle cx="160" cy="212" r="87" fill="#67461d" opacity=".7"/><circle cx="160" cy="208" r="84" fill="url(#gold)" stroke="#f4dd97" stroke-width="3"/><circle cx="160" cy="208" r="69" fill="none" stroke="#8b5c20" stroke-width="2"/><circle cx="160" cy="208" r="59" fill="none" stroke="#fff0bc" stroke-width="1.5"/><path d="M160 162l12 25 28 4-20 19 5 28-25-13-25 13 5-28-20-19 28-4z" fill="#8b5c20" opacity=".84"/><circle cx="160" cy="208" r="14" fill="#f8e4a1"/><path d="M160 197v22m-8-11h16" stroke="#9a6825" stroke-width="2"/></svg></div>
-          <div class="hero-stat-card"><span class="hero-stat-card__label">ACADEMIC MILESTONE</span><span class="hero-stat-card__rank">08<span>th</span></span><span class="hero-stat-card__caption">SASMO / RANK</span><div class="hero-stat-card__line"></div></div>
-          <div class="hero-art__stamp"><span>THE<br/>WORK<br/><i>MATTERS</i></span></div><span class="hero-art__coordinates">VOL. 01<br/>PERSONAL ARCHIVE</span>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-cross hero-cross--one"></div><div class="hero-cross hero-cross--two"></div><div class="hero-ring hero-ring--one"></div><div class="hero-ring hero-ring--two"></div>
+        <div class="hero-monogram">W<span>/</span></div>
+        <div class="hero-orbit-label hero-orbit-label--top">LOG_001 // VERIFIED MOMENTS</div>
+        <div class="hero-orbit-label hero-orbit-label--bottom">STILL IN PROGRESS — SCROLL TO INSPECT</div>
+        <div class="hero-orbit-dot"></div>
+      </div>
+      <div class="hero-footer"><span>SCROLL ↓</span><div class="hero-footer-line"></div><span class="hero-footer-right">NO TEMPLATE. JUST THE RECORD.</span></div>
+    </section>
+
+    <section class="achievement-section" id="achievements">
+      <div class="section-heading reveal">
+        <div class="section-kicker"><span class="kicker-number">01 / 04</span><span class="kicker-line"></span><span>THE RECORD</span></div>
+        <div class="heading-row"><h2>SCROLL.<br><span>FOCUS.</span></h2><p>Each milestone gets its own frame. Keep scrolling and the stage changes with it — no rows of copy-paste cards.</p></div>
+      </div>
+
+      <div class="story-layout">
+        <aside class="spotlight-wrap">
+          <div class="spotlight" id="spotlight" data-active="sasmo" aria-label="Currently highlighted achievement">
+            <div class="spotlight-topline"><span>ACHIEVEMENT_VIEWER.exe</span><span id="spotlightIndex">01 / 04</span></div>
+            <div class="spotlight-cross spotlight-cross--tl"></div><div class="spotlight-cross spotlight-cross--tr"></div><div class="spotlight-cross spotlight-cross--bl"></div><div class="spotlight-cross spotlight-cross--br"></div>
+            <div class="spotlight-art is-active" data-art="sasmo" aria-hidden="false">
+              <div class="art-grid"></div><div class="sasmo-orbit sasmo-orbit--a"></div><div class="sasmo-orbit sasmo-orbit--b"></div>
+              <span class="art-side-label">SINGAPORE & ASIAN SCHOOLS MATH OLYMPIAD</span>
+              <div class="sasmo-figure">08<span>TH</span></div>
+              <div class="sasmo-baseline"></div><span class="sasmo-caption">RANK / MATHEMATICS</span>
+              <span class="sasmo-index">8.0</span>
+            </div>
+            <div class="spotlight-art" data-art="tennis" aria-hidden="true">
+              <div class="court-perspective"><div class="court-line court-line--outer"></div><div class="court-line court-line--vertical"></div><div class="court-line court-line--horizontal"></div><div class="court-line court-line--service"></div><div class="court-net"></div></div>
+              <div class="tennis-ball"></div>
+              <svg class="trophy-sculpture" viewBox="0 0 300 360" role="img" aria-label="Abstract monochrome trophy illustration"><defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f5f1"/><stop offset=".23" stop-color="#777b7d"/><stop offset=".43" stop-color="#d1d2cf"/><stop offset=".62" stop-color="#525659"/><stop offset=".83" stop-color="#c7c9c5"/><stop offset="1" stop-color="#616568"/></linearGradient></defs><path d="M77 44H223L211 127C205 172 183 198 150 198S95 172 89 127Z" fill="url(#metal)" stroke="#eee" stroke-width="1.5"/><path d="M77 60H42C40 113 60 149 101 154M223 60h35c2 53-18 89-59 94" fill="none" stroke="url(#metal)" stroke-width="17" stroke-linecap="round"/><path d="M132 197h36l12 83h-60z" fill="url(#metal)"/><path d="M103 278h94l14 29H89z" fill="url(#metal)"/><path d="M78 307h144v22H78z" fill="url(#metal)"/><path d="M150 75l9 19 21 3-15 14 4 21-19-10-19 10 4-21-15-14 21-3z" fill="#55595a"/><path d="M93 55h114" stroke="#f9f9f6" stroke-width="2" opacity=".8"/></svg>
+              <span class="tennis-word">DISTRICT</span><span class="tennis-caption">TENNIS / TROPHY</span>
+            </div>
+            <div class="spotlight-art" data-art="hackathon" aria-hidden="true">
+              <div class="terminal-frame"><div class="terminal-head"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span><span>SELECTION_LOG / 01</span></div><div class="terminal-body"><span class="terminal-prompt">> status --check</span><div class="terminal-divider"></div><span class="terminal-output">SELECTION<br>CONFIRMED<span class="terminal-cursor">_</span></span><div class="terminal-divider"></div><div class="terminal-detail"><span>TYPE</span><b>HACKATHON</b></div><div class="terminal-detail"><span>RECORD</span><b>ORIGINAL EMAIL</b></div><div class="terminal-mark">[ OK ]</div></div></div>
+              <span class="hack-side">IDEA → REVIEW → SELECTED</span>
+            </div>
+            <div class="spotlight-art" data-art="medals" aria-hidden="true">
+              <div class="medal-lines"></div>
+              <div class="hanging-medal hanging-medal--one"><div class="medal-ribbon"></div><div class="medal-coin"><span>★</span></div></div>
+              <div class="hanging-medal hanging-medal--two"><div class="medal-ribbon"></div><div class="medal-coin"><span>II</span></div></div>
+              <div class="hanging-medal hanging-medal--three"><div class="medal-ribbon"></div><div class="medal-coin"><span>III</span></div></div>
+              <div class="medal-archive-stamp">THE<br>COLLECTION<br><b>VOL. 01</b></div>
+              <span class="medals-caption">MEDALS / RECOGNITIONS / PERSONAL ARCHIVE</span>
+            </div>
+            <div class="spotlight-footer"><span id="spotlightLabel">ACADEMIC / SASMO</span><span class="spotlight-live"><i></i> LIVE FOCUS</span></div>
+          </div>
+          <div class="spotlight-instruction"><span>↕</span> SCROLL TO SWITCH THE RECORD</div>
+        </aside>
+
+        <div class="achievement-steps" id="achievementSteps">
+          <article class="achievement-step is-current" data-achievement="sasmo" data-index="01">
+            <div class="step-top"><span>01 / ACADEMIC</span><span>MATHEMATICS</span></div>
+            <p class="step-micro">SINGAPORE & ASIAN SCHOOLS MATH OLYMPIAD</p>
+            <h3>RANK<br><span class="step-heavy">EIGHT.</span></h3>
+            <div class="step-result"><span class="result-number">08<sup>TH</sup></span><span class="result-label">SASMO<br>OLYMPIAD</span></div>
+            <p class="step-copy">An academic milestone built around mathematical reasoning. The final archive entry can pair the result with the original certificate and a short note on the preparation behind it.</p>
+            <div class="step-bottom"><span>ACHIEVEMENT 001</span><span class="step-status">CURRENT FOCUS ↗</span></div>
+          </article>
+          <article class="achievement-step" data-achievement="tennis" data-index="02">
+            <div class="step-top"><span>02 / SPORT</span><span>COMPETITION</span></div>
+            <p class="step-micro">COURT / COMPETITIVE RECORD</p>
+            <h3>MADE<br><span class="step-heavy">ON COURT.</span></h3>
+            <div class="step-result step-result--text"><span class="result-word">DISTRICT</span><span class="result-label">TENNIS<br>TROPHY</span></div>
+            <p class="step-copy">A trophy from district tennis. The story here is not only the result, but the practice, consistency and decisions that happen long before match point.</p>
+            <div class="step-bottom"><span>ACHIEVEMENT 002</span><span class="step-status">CURRENT FOCUS ↗</span></div>
+          </article>
+          <article class="achievement-step" data-achievement="hackathon" data-index="03">
+            <div class="step-top"><span>03 / INNOVATION</span><span>SELECTION</span></div>
+            <p class="step-micro">HACKATHON / SELECTION NOTICE</p>
+            <h3>IDEA IN.<br><span class="step-heavy">SELECTED.</span></h3>
+            <div class="step-result step-result--text"><span class="result-word result-word--selected">[ SELECTED ]</span><span class="result-label">HACKATHON<br>ENTRY</span></div>
+            <p class="step-copy">A selection email is evidence that an idea made it through a review stage. Add the event name and the redacted original email when ready; the design deliberately does not fake a certificate.</p>
+            <div class="step-bottom"><span>ACHIEVEMENT 003</span><span class="step-status">CURRENT FOCUS ↗</span></div>
+          </article>
+          <article class="achievement-step" data-achievement="medals" data-index="04">
+            <div class="step-top"><span>04 / COLLECTION</span><span>RECOGNITION</span></div>
+            <p class="step-micro">A RUNNING RECORD OF MILESTONES</p>
+            <h3>MORE THAN<br><span class="step-heavy">METAL.</span></h3>
+            <div class="step-result step-result--text"><span class="result-word">THE ARCHIVE</span><span class="result-label">MEDALS &<br>RECOGNITIONS</span></div>
+            <p class="step-copy">A collection of medals and recognitions. Each real item can later become its own entry with a photograph, event name, date and the story attached to it.</p>
+            <div class="step-bottom"><span>ACHIEVEMENT 004</span><span class="step-status">CURRENT FOCUS ↗</span></div>
+          </article>
         </div>
-        <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><div class="scroll-cue"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v16m-7-7 7 7 7-7"/></svg></div><span class="hero-bottom__right">A WORK IN PROGRESS <span>↘</span></span></div>
-      </section>
-      <div class="ticker"><div class="ticker__track"><span>CURIOSITY ✳ DISCIPLINE ✳ PRACTICE ✳ PROGRESS ✳ PLAY ✳</span><span>CURIOSITY ✳ DISCIPLINE ✳ PRACTICE ✳ PROGRESS ✳ PLAY ✳</span><span>CURIOSITY ✳ DISCIPLINE ✳ PRACTICE ✳ PROGRESS ✳ PLAY ✳</span><span>CURIOSITY ✳ DISCIPLINE ✳ PRACTICE ✳ PROGRESS ✳ PLAY ✳</span></div></div>
+      </div>
+      <div class="achievement-endline"><span>END OF RECORD / 004 ENTRIES</span><span>MORE CAN BE ADDED AS THE ARCHIVE GROWS</span></div>
+    </section>
 
-      <section class="archive-section paper-section" id="archive"><div class="section-container">
-        <div class="archive-intro"><div class="section-label js-reveal"><span class="section-label__dot"></span>01 — THE ARCHIVE</div><div class="archive-intro__headline js-reveal"><h2>Different arenas.<br/><em>One journey.</em></h2><div class="archive-intro__aside"><span class="aside-mark">↘</span><p>Some achievements fit in a frame. Others live in the habits built along the way. This archive makes room for both.</p><span class="small-meta">A CURATED COLLECTION / DETAILS TO COME</span></div></div></div>
-        <div class="archive-toolbar"><div class="archive-toolbar__left"><span class="small-meta">BROWSE BY CATEGORY</span><div class="filter-group" role="group" aria-label="Filter achievements"><button class="filter-button is-selected" data-filter="All" aria-pressed="true">All</button><button class="filter-button" data-filter="Academic" aria-pressed="false">Academic</button><button class="filter-button" data-filter="Sport" aria-pressed="false">Sport</button><button class="filter-button" data-filter="Innovation" aria-pressed="false">Innovation</button><button class="filter-button" data-filter="Collection" aria-pressed="false">Collection</button></div></div><span class="archive-count"><b id="entryCount">04</b> <i>ENTRIES</i></span></div>
-        <div class="achievement-grid" id="achievementGrid">
-          <article class="achievement-card" data-category="Academic" data-id="sasmo"><button class="achievement-card__button" data-open="sasmo" aria-label="Open details: 8th rank SASMO Olympiad"><div class="achievement-card__visual achievement-card__visual--sasmo"><div class="achievement-art sasmo-art"><div class="sasmo-art__halo"></div><span class="sasmo-art__top">SASMO / MATHEMATICS</span><div class="sasmo-art__number">08<span>th</span></div><div class="sasmo-art__rule"></div><span class="sasmo-art__bottom">RANK · YEAR TO ADD</span><span class="sasmo-art__asterisk">✳</span></div><span class="card-index">01 / 04</span><span class="card-open">↗</span></div><div class="achievement-card__meta"><span>ACADEMIC</span><span>RESULT / YEAR TO ADD</span></div><h3>A number worth remembering</h3><p>8th rank · SASMO Olympiad</p><div class="achievement-card__footer"><span>OPEN STORY</span><span>→</span></div></button></article>
-          <article class="achievement-card" data-category="Sport" data-id="tennis"><button class="achievement-card__button" data-open="tennis" aria-label="Open details: District tennis trophy"><div class="achievement-card__visual achievement-card__visual--tennis"><div class="achievement-art tennis-art"><div class="tennis-art__glow"></div><div class="court-art"><div class="court-art__court"><i></i><i></i><i></i><i></i><b></b></div><div class="court-art__ball"></div><div class="court-art__label">MATCH<br/>POINT<span> / 00</span></div></div><div class="tennis-art__trophy"><svg viewBox="0 0 400 320" class="trophy-art" role="img" aria-label="Trophy illustration"><defs><linearGradient id="cup" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0c0"/><stop offset=".28" stop-color="#c08b3b"/><stop offset=".52" stop-color="#f5d78a"/><stop offset=".76" stop-color="#8f602a"/><stop offset="1" stop-color="#eac875"/></linearGradient><linearGradient id="stem" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#80531d"/><stop offset=".45" stop-color="#f1d48e"/><stop offset="1" stop-color="#8e6023"/></linearGradient></defs><ellipse cx="202" cy="285" rx="116" ry="12" fill="#18231e" opacity=".18"/><path d="M125 52H279L265 129C259 161 237 184 202 184S145 161 139 129Z" fill="url(#cup)"/><path d="M125 63H92c-1 44 19 75 57 81M279 63h34c1 44-19 75-57 81" fill="none" stroke="url(#cup)" stroke-width="18" stroke-linecap="round"/><path d="M188 181h28l7 63h-42z" fill="url(#stem)"/><path d="M156 240h92l14 30H142z" fill="url(#cup)"/><path d="M130 271h144v17H130z" fill="#795020"/><path d="M140 271h124v6H140z" fill="#f7d98c"/><path d="M201 82l8 17 19 3-14 13 3 19-16-9-17 9 4-19-14-13 19-3z" fill="#9c6421" opacity=".85"/></svg></div><span class="art-caption">DISTRICT TENNIS / TROPHY</span></div><span class="card-index">02 / 04</span><span class="card-open">↗</span></div><div class="achievement-card__meta"><span>SPORT</span><span>TOURNAMENT / YEAR TO ADD</span></div><h3>Earned on court</h3><p>District tennis trophy</p><div class="achievement-card__footer"><span>OPEN STORY</span><span>→</span></div></button></article>
-          <article class="achievement-card" data-category="Innovation" data-id="hackathon"><button class="achievement-card__button" data-open="hackathon" aria-label="Open details: Hackathon selection"><div class="achievement-card__visual achievement-card__visual--hackathon"><div class="achievement-art hack-art"><div class="hack-art__window"><div class="hack-art__bar"><i></i><i></i><i></i><span>SELECTION_NOTICE.PDF</span></div><div class="hack-art__content"><span class="hack-art__eyebrow">OFFICIAL NOTICE / PREVIEW</span><div class="hack-art__line hack-art__line--long"></div><div class="hack-art__line hack-art__line--mid"></div><div class="hack-art__stamp">✓<br/>SELECTED</div><div class="hack-art__line"></div><div class="hack-art__line hack-art__line--short"></div></div></div><span class="art-caption">HACKATHON / EMAIL</span></div><span class="card-index">03 / 04</span><span class="card-open">↗</span></div><div class="achievement-card__meta"><span>INNOVATION</span><span>EVENT / YEAR TO ADD</span></div><h3>An idea selected</h3><p>Hackathon selection</p><div class="achievement-card__footer"><span>OPEN STORY</span><span>→</span></div></button></article>
-          <article class="achievement-card" data-category="Collection" data-id="medals"><button class="achievement-card__button" data-open="medals" aria-label="Open details: Medals and recognitions"><div class="achievement-card__visual achievement-card__visual--medals"><div class="achievement-art medal-collection-art"><div class="medal-collection-art__flare"></div><svg class="medal-art" viewBox="0 0 320 330" aria-hidden="true"><defs><linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b4"/><stop offset=".3" stop-color="#b8802d"/><stop offset=".5" stop-color="#f8d783"/><stop offset="1" stop-color="#97601e"/></linearGradient></defs><path d="M105 20h45l10 135-54-24z" fill="#b96542"/><path d="M170 20h45l-2 111-53 24z" fill="#2d5147"/><circle cx="160" cy="208" r="84" fill="url(#gold2)" stroke="#f4dd97" stroke-width="3"/><circle cx="160" cy="208" r="69" fill="none" stroke="#8b5c20" stroke-width="2"/><path d="M160 162l12 25 28 4-20 19 5 28-25-13-25 13 5-28-20-19 28-4z" fill="#8b5c20"/></svg><div class="medal-mini"><svg viewBox="0 0 320 330" class="medal-art" aria-hidden="true"><path d="M105 20h45l10 135-54-24z" fill="#2d5147"/><path d="M170 20h45l-2 111-53 24z" fill="#ad6b3b"/><circle cx="160" cy="208" r="84" fill="#dbbd70" stroke="#f4dd97" stroke-width="3"/><circle cx="160" cy="208" r="59" fill="none" stroke="#8b5c20" stroke-width="2"/></svg></div><span class="art-caption">COLLECTION / 01—∞</span></div><span class="card-index">04 / 04</span><span class="card-open">↗</span></div><div class="achievement-card__meta"><span>COLLECTION</span><span>DETAILS TO ADD</span></div><h3>Small objects, long stories</h3><p>Medals & recognitions</p><div class="achievement-card__footer"><span>OPEN STORY</span><span>→</span></div></button></article>
+    <section class="work-section" id="work">
+      <div class="section-heading reveal">
+        <div class="section-kicker"><span class="kicker-number">02 / WORK</span><span class="kicker-line"></span><span>SELECTED BUILDS & IDEAS</span></div>
+        <div class="heading-row"><h2>MADE.<br><span>TESTED.</span></h2><p>Projects, experiments and collaborations — shown as an editorial log, not a wall of little cards.</p></div>
+      </div>
+      <div class="work-log">
+        <a class="work-row reveal" href="#reflections"><span class="work-row-num">001</span><div class="work-row-main"><span class="work-row-label">BUILD / DIGITAL</span><h3>A PROJECT FROM ZERO</h3><p>A project slot for a website, prototype or tool. Replace this line with the problem, your contribution and the outcome.</p></div><span class="work-row-mark">↗</span></a>
+        <a class="work-row reveal" href="#reflections"><span class="work-row-num">002</span><div class="work-row-main"><span class="work-row-label">COLLABORATION / TEAM</span><h3>BUILT WITH OTHERS</h3><p>A team effort, presentation or initiative. Explain what you specifically contributed and what the group delivered.</p></div><span class="work-row-mark">↗</span></a>
+        <a class="work-row reveal" href="#reflections"><span class="work-row-num">003</span><div class="work-row-main"><span class="work-row-label">EXPERIMENT / CREATIVE</span><h3>AN IDEA IN MOTION</h3><p>A creative experiment, piece of writing or concept that improved through testing, feedback and iteration.</p></div><span class="work-row-mark">↗</span></a>
+      </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+      <div class="section-heading reveal">
+        <div class="section-kicker"><span class="kicker-number">03 / LOG</span><span class="kicker-line"></span><span>THE JOURNEY</span></div>
+        <div class="heading-row"><h2>NOTHING<br><span>HAPPENS</span><br>IN ONE DAY.</h2><p>Use the timeline to connect real events, not to invent a perfect story. Dates and milestones will be filled in after collecting evidence.</p></div>
+      </div>
+      <div class="timeline">
+        <article class="timeline-entry reveal"><span class="timeline-number">01</span><span class="timeline-tag">THE START</span><div><h3>CURIOSITY BECOMES PRACTICE.</h3><p>Add the early interest, first competition or first project that started a longer journey.</p></div><span class="timeline-marker"></span></article>
+        <article class="timeline-entry reveal"><span class="timeline-number">02</span><span class="timeline-tag">THE REPETITIONS</span><div><h3>SHOWING UP, AGAIN.</h3><p>Describe the preparation, feedback or setbacks behind one achievement.</p></div><span class="timeline-marker"></span></article>
+        <article class="timeline-entry reveal"><span class="timeline-number">03</span><span class="timeline-tag">THE LEAP</span><div><h3>TAKING A CHANCE.</h3><p>Document the point where you tried something unfamiliar — in sport, academics or making things.</p></div><span class="timeline-marker"></span></article>
+        <article class="timeline-entry reveal"><span class="timeline-number">04</span><span class="timeline-tag">NEXT UP</span><div><h3>STILL LOADING.</h3><p>What are you working toward now? Keep the next chapter specific, realistic and yours.</p></div><span class="timeline-marker"></span></article>
+      </div>
+    </section>
+
+    <section class="reflection-section" id="reflections">
+      <div class="section-kicker reveal"><span class="kicker-number">04 / NOTES</span><span class="kicker-line"></span><span>REFLECTIONS</span></div>
+      <div class="reflection-title reveal"><span class="quote-mark">“</span><h2>THE RESULT<br>IS A MOMENT.<br><span>THE WORK STAYS.</span></h2></div>
+      <div class="reflection-grid">
+        <div class="reflection-intro reveal"><span class="tiny-label">FIELD NOTES / PERSONAL</span><p>This section turns a list of awards into an English portfolio. The strongest version uses real examples and says what each experience taught you.</p></div>
+        <div class="reflection-questions">
+          <div class="reflection-question reveal"><span>01</span><p>What challenged you more than you expected?</p><b>↘</b></div>
+          <div class="reflection-question reveal"><span>02</span><p>What habit, skill or idea did you carry forward?</p><b>↘</b></div>
+          <div class="reflection-question reveal"><span>03</span><p>What would you do differently next time?</p><b>↘</b></div>
         </div>
-        <div class="archive-note js-reveal"><div class="archive-note__icon">♧</div><p><strong>Evidence first.</strong> Every entry is designed to hold a real photograph, certificate or document, plus the context that gives it meaning. Placeholder details are clearly marked for replacement.</p><span class="small-meta">NOTE / 001</span></div>
-      </div></section>
-
-      <section class="feature-spread dark-section"><div class="feature-spread__noise"></div><div class="section-container feature-spread__inner"><div class="section-label section-label--invert js-reveal"><span class="section-label__dot"></span>02 — THE IDEA</div><div class="feature-spread__grid"><div class="feature-spread__left js-reveal"><p class="feature-spread__overline">AN ACHIEVEMENT IS A MOMENT.<br/>GROWTH IS WHAT STAYS.</p><h2>Proof is<br/>only <em>part</em><br/>of the story.</h2><div class="feature-spread__bottom"><span class="feature-spread__dash"></span><p>The number is easy to display. The preparation, doubt, repetition and small decisions behind it deserve a place too.</p></div></div><div class="feature-spread__right js-reveal"><div class="feature-card"><div class="feature-card__top"><span>ACADEMIC RECORD</span><span>FILE / 001</span></div><div class="feature-card__number">08<span>th</span></div><div class="feature-card__title">SASMO<br/><em>Olympiad</em></div><div class="feature-card__separator"></div><div class="feature-card__bottom"><span>RANK / YEAR TO ADD</span><span class="feature-card__seal">✳</span></div><div class="feature-card__ghost">08</div></div><div class="feature-side-caption">✳ &nbsp; THE DETAILS MATTER.<br/> &nbsp; &nbsp; THE PROCESS TOO.</div></div></div></div></section>
-
-      <section class="projects-section paper-section" id="projects"><div class="section-container"><div class="projects-heading"><div class="section-label js-reveal"><span class="section-label__dot"></span>03 — SELECTED WORK</div><div class="projects-heading__row js-reveal"><h2>Ideas, made<br/><em>tangible.</em></h2><p>Not every meaningful result comes with a medal. This is where projects, experiments and collaborative work get their own space.</p></div></div><div class="project-list">
-        <article class="project-row js-reveal"><div class="project-row__art"><div class="project-art project-art--build"><div class="project-art__window"><div class="project-art__chrome"><span></span><span></span><span></span></div><div class="code-block"><i>01</i><span>const</span> journey = <b>build</b>();</div><div class="code-block"><i>02</i>journey.<b>learn</b>();</div><div class="code-block"><i>03</i>return <em>progress</em>;</div><div class="project-art__cursor"></div></div><span class="project-row__art-tag">BUILD / 001</span></div></div><div class="project-row__content"><div class="project-row__top"><span>01 / 03</span><span>PROJECT / DETAILS TO ADD</span></div><h3>Something built from zero</h3><p>A coding project, prototype or digital tool. Explain the problem, the decisions you made and what works today.</p><span class="project-row__prompt">REPLACE WITH YOUR STORY ↗</span></div><div class="project-row__arrow">↗</div></article>
-        <article class="project-row js-reveal"><div class="project-row__art"><div class="project-art project-art--team"><div class="orbit orbit--one"></div><div class="orbit orbit--two"></div><div class="orbit orbit--three"></div><div class="team-node team-node--one">IDEA</div><div class="team-node team-node--two">PLAN</div><div class="team-node team-node--three">BUILD</div><div class="team-node team-node--four">SHARE</div><span class="project-row__art-tag">COLLABORATE / 002</span></div></div><div class="project-row__content"><div class="project-row__top"><span>02 / 03</span><span>COLLABORATION / DETAILS TO ADD</span></div><h3>A challenge solved together</h3><p>A team project, presentation or initiative. Make your specific contribution visible rather than claiming the whole result.</p><span class="project-row__prompt">REPLACE WITH YOUR STORY ↗</span></div><div class="project-row__arrow">↗</div></article>
-        <article class="project-row js-reveal"><div class="project-row__art"><div class="project-art project-art--ideas"><span>What if</span><span>we tried</span><span class="project-art__italic">another way?</span><div class="project-art__scribble"></div><span class="project-row__art-tag">EXPERIMENT / 003</span></div></div><div class="project-row__content"><div class="project-row__top"><span>03 / 03</span><span>CREATIVE WORK / DETAILS TO ADD</span></div><h3>An idea worth exploring</h3><p>A piece of writing, a research question, an experiment or an idea that developed through iteration.</p><span class="project-row__prompt">REPLACE WITH YOUR STORY ↗</span></div><div class="project-row__arrow">↗</div></article>
-      </div><div class="projects-footer js-reveal"><span class="small-meta">SELECT FOR DEPTH, NOT VOLUME</span><p>Two or three projects with clear evidence and thoughtful writing will tell a stronger story than a long list of unfinished items.</p></div></div></section>
-
-      <section class="journey-section dark-section" id="journey"><div class="journey-grid-bg"></div><div class="section-container journey-container"><div class="section-label section-label--invert js-reveal"><span class="section-label__dot"></span>04 — THE JOURNEY</div><div class="journey-heading"><div class="js-reveal"><h2>The work<br/>between <em>the wins.</em></h2></div><div class="js-reveal"><p>A timeline is not just a sequence of dates. It connects the things you tried, the people you learned from and the moments that changed your approach.</p></div></div><div class="timeline-list">
-        <article class="timeline-item js-reveal"><div class="timeline-item__marker"><span>01</span></div><div class="timeline-item__time">THE BEGINNING</div><div class="timeline-item__body"><h3>A curiosity takes shape</h3><p>Add an early interest, first competition or experience that started a longer journey. One specific memory is more compelling than a broad claim. This archive will be personalised after gathering evidence.</p></div><div class="timeline-item__hint">DETAILS<br/>TO ADD</div></article>
-        <article class="timeline-item js-reveal"><div class="timeline-item__marker"><span>02</span></div><div class="timeline-item__time">THE PRACTICE</div><div class="timeline-item__body"><h3>Learning to stay with it</h3><p>Show the preparation behind an achievement: repetition, feedback, a difficult attempt or a decision to keep improving.</p></div><div class="timeline-item__hint">DETAILS<br/>TO ADD</div></article>
-        <article class="timeline-item js-reveal"><div class="timeline-item__marker"><span>03</span></div><div class="timeline-item__time">THE LEAP</div><div class="timeline-item__body"><h3>Taking the work further</h3><p>Choose a moment when you challenged yourself, worked with others or tried something unfamiliar.</p></div><div class="timeline-item__hint">DETAILS<br/>TO ADD</div></article>
-        <article class="timeline-item js-reveal"><div class="timeline-item__marker"><span>04</span></div><div class="timeline-item__time">THE NEXT CHAPTER</div><div class="timeline-item__body"><h3>Still in progress</h3><p>Describe what you want to learn next and the kind of work you hope to contribute to. Keep it ambitious, but believable.</p></div><div class="timeline-item__hint">DETAILS<br/>TO ADD</div></article>
-      </div><div class="journey-foot"><span class="journey-foot__line"></span><span>CHRONOLOGY / YEARS WILL BE ADDED AFTER EVIDENCE COLLECTION</span></div></div></section>
-
-      <section class="reflection-section paper-section" id="reflections"><div class="section-container reflection-container"><div class="reflection-top"><div class="section-label js-reveal"><span class="section-label__dot"></span>05 — REFLECTIONS</div><span class="reflection-top__note">A PERSONAL NOTE TO SELF ✳</span></div><blockquote class="reflection-quote js-reveal">“The achievement is a snapshot.<br/>The person is <em>still becoming.</em>”</blockquote><div class="reflection-bottom"><div class="reflection-bottom__lead js-reveal">This is the part that cannot be measured by a certificate.</div><div class="reflection-prompts js-reveal"><div><span>01 / LOOK BACK</span><p>What challenged you more than you expected?</p></div><div><span>02 / MAKE MEANING</span><p>Which habit or idea stayed with you afterwards?</p></div><div><span>03 / LOOK AHEAD</span><p>What will you take on next, and why?</p></div></div></div></div></section>
-      <section class="closing-section dark-section"><div class="closing-orbit closing-orbit--one"></div><div class="closing-orbit closing-orbit--two"></div><div class="section-container closing-container"><div class="section-label section-label--invert js-reveal"><span class="section-label__dot"></span>06 — STILL IN PROGRESS</div><h2 class="js-reveal">The story<br/>is still <em>being written.</em></h2><div class="js-reveal"><p>More to learn. More to make. More to understand about the work behind the outcome.</p><a class="button button--light closing-cta" href="#top">Return to the beginning <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div><div class="closing-signoff"><span>BEYOND THE MILESTONE</span><span>PERSONAL ARCHIVE / VOL. 01</span><span>© 2026 · YOUR NAME HERE</span></div></div></section>
-    </main>
-    <footer class="site-footer"><span>DESIGNED AS A LIVING DOCUMENT.</span><span>PLACEHOLDER CONTENT — REPLACE BEFORE SUBMISSION.</span><a href="#top">BACK TO TOP ↑</a></footer>
-
-    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><section class="achievement-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close achievement details">×</button><div class="achievement-modal__visual" id="modalVisual"></div><div class="achievement-modal__copy"><div class="section-label"><span class="section-label__dot"></span><span id="modalCategory">ACADEMIC / STORY</span></div><div class="modal-category" id="modalMeta"></div><h2 id="modalTitle">Achievement details</h2><p class="modal-detail" id="modalDetail"></p><div class="modal-divider"></div><span class="modal-label">THE REFLECTION</span><p id="modalReflection"></p><div class="evidence-box"><span>▧</span><div><strong>Evidence to add</strong><span id="modalEvidence"></span></div></div><button class="modal-done" id="modalDone">Back to the archive <span>←</span></button></div></section></div>
-  </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <a class="footer-brand" href="#top">W/ <span>PERSONAL ARCHIVE_001</span></a><span>BUILT TO BE FILLED WITH THE REAL THING.</span><a href="#top" class="back-top">BACK TO TOP ↑</a>
+    </footer>
+  </main>
   <script src="preview.js"></script>
-  <script src="motion.js"></script>
 </body>
 </html>
