@@ -1,26 +1,27 @@
-# Personal Achievement Archive
+# The Work Speaks — Personal Portfolio
 
-A 90s-inspired monochrome portfolio draft built around a cinematic opener and a scroll-led achievement spotlight. The four achievements each have their own large visual composition: SASMO 8th rank, district tennis trophy, hackathon selection, and the medal collection.
+A responsive, editorial portfolio built around academic milestones, sport, ideas, and personal reflection. The design mixes warm paper surfaces with deep plum sections, coral/lilac/mint gradients, oversized geometric lettering, serif italics, and a few hand-drawn-style accents.
 
 ## Live site
 https://masterdooom.github.io/portfolio/
 
-## What makes this version different
-- The achievement section is scrollytelling, not a grid of generic cards. The sticky spotlight changes as each entry crosses the viewport's focus zone.
-- A black, graphite and silver palette with CRT scanlines, strict grid lines and oversized display type.
-- Archivo Black headings, Space Grotesk body copy and IBM Plex Mono labels.
-- Lightweight, observer-triggered reveals and a single requestAnimationFrame scroll-progress update. No Three.js, no canvas loop, no scroll-smoothing hijack.
-- Respects `prefers-reduced-motion`; the page content remains readable even if JavaScript is unavailable.
+## Experience
+- A light, expressive hero with layered colour fields, a monogram graphic, a sticker-style handwritten note, and a clear scroll CTA.
+- An animated focus ribbon that introduces the main themes.
+- An achievement scrollytelling sequence: the sticky spotlight changes artwork as the matching story entry crosses the viewport focus band.
+- A spacious project log, a soft-lavender timeline, and a contrasting reflection section.
+- Mobile navigation, scroll progress, pointer-aware details on desktop, and observer-triggered reveals.
+- Responsive type and spacing, keyboard focus styles, and support for `prefers-reduced-motion`.
 
 ## Files
-- `index.html` — all content and the four achievement scenes.
-- `preview.css` — theme, typography, responsive layouts and transitions.
-- `preview.js` — active achievement spotlight, reveal observer, progress line and mobile menu.
+- `index.html` — page content and the four achievement compositions.
+- `preview.css` — unified design system, typography, responsive layouts, and motion.
+- `preview.js` — mobile nav, scroll progress, active-section states, achievement scrollytelling, and low-cost pointer interactions.
 - `CONTENT-GUIDE.md` — content/evidence checklist.
-- `DESIGN-NOTES.md` — original design notes.
+- `DESIGN-NOTES.md` — design choices and implementation notes.
 
-## Personalise before submission
-Replace the illustrative graphics with photographs of your real medals and tennis trophy, and a redacted screenshot of the actual hackathon selection email. Add the SASMO certificate, exact competition year/category and hackathon name once verified. Add real project names and dated timeline entries. Never publish unredacted email addresses, phone numbers or private message content.
+## Before submitting
+Replace the illustrative medal and trophy graphics with photographs of the real items, and add a redacted image of the original hackathon selection email. Add the SASMO certificate, exact competition year/category, and hackathon name once verified. Replace project and timeline placeholders with real examples. Do not publish unredacted email addresses, phone numbers, or private messages.
 
 ## Deploy
-Push changes to `main`; GitHub Actions publishes `index.html`, `preview.css` and `preview.js` through GitHub Pages.
+Push changes to `main`; GitHub Actions publishes `index.html`, `preview.css`, and `preview.js` via GitHub Pages.
