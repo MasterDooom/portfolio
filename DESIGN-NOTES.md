@@ -1,26 +1,25 @@
-# Design notes — Personal Achievement Archive
+# Design notes — The Work Speaks
 
 ## Art direction
-- Monochrome 1990s interface language: near-black, graphite, chrome/silver, low-key phosphor accents.
-- Archivo Black for titles, Space Grotesk for body text, IBM Plex Mono for small UI labels.
-- Static scanlines and grid texture; hard rules, technical labels, oversized typography and original vector achievement art.
-- No dependence on WebGL/Three.js or a custom rendering loop.
+- Editorial student portfolio: warm paper (#f7f0e8), deep plum (#251630), and merging coral, lilac, mint, and butter accents.
+- Syne is used for oversized, decisive display typography; DM Serif Display Italic adds contrast; Manrope carries body copy; IBM Plex Mono is reserved for metadata; Caveat and a small Comic Sans note provide controlled hand-written/playful moments.
+- Large type, generous space, restrained color fields, carefully framed achievements, and section-to-section contrast are the main visual devices.
+- The hero, achievement spotlight, and section backgrounds use layered CSS gradients rather than WebGL or a continuous canvas renderer.
 
 ## Achievement experience
-The four main achievements are a scrollytelling sequence. A large sticky spotlight shows an original typographic/vector composition while the text entry on the right advances. IntersectionObserver switches the spotlight when a chapter crosses the central focus band.
+The four achievement entries form a scrollytelling sequence. A sticky spotlight shows an original typographic/vector composition while the story entry advances. IntersectionObserver switches the artwork when a chapter crosses the central focus band.
 
-## Motion and performance
-- One-time headline entrance and observer-triggered content reveals.
-- CSS opacity/transform transitions, no large blur filters or layout-property animation.
-- One requestAnimationFrame-coalesced scroll handler updates only the thin progress indicator.
-- No smooth-scroll hijacking and no always-running parallax loop.
-- Honour prefers-reduced-motion; content remains visible without JavaScript.
+## Motion, accessibility, performance
+- Observer-triggered reveals, headline clipping, a moving theme ribbon, subtle orbital shapes, and state changes on the spotlight and timeline.
+- Scroll progress uses one requestAnimationFrame-coalesced scroll handler.
+- Pointer-following details run only on fine pointers and are disabled when reduced motion is requested.
+- No smooth-scroll hijacking; the site honours `prefers-reduced-motion` and leaves content readable without JavaScript.
 
 ## References consulted
 - Shutterkif OSS reference: https://github.com/shutterkif-oss/shutterkif-oss.github.io
 - MotionFolio open-source starter: https://github.com/zickrian/motionfolio
-- GSAP ScrollTrigger documentation: https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+- Awwwards creative portfolio inspiration: https://www.awwwards.com/websites/single-page-1/
 - MDN Intersection Observer: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 - GSAP performance notes: https://github.com/sam-u-p/gsap-effects/blob/main/docs/performance.md
 
-These references informed the broad visual direction and interaction/performance approach. This site uses its own HTML/CSS artwork and lightweight JavaScript, rather than copying another portfolio's source or assets.
+These references informed broad layout and interaction principles. The site uses its own HTML/CSS artwork and lightweight JavaScript rather than copying another portfolio's source or assets.
