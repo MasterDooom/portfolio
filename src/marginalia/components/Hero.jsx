@@ -83,10 +83,10 @@ export default function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="r-hero__scroll-cue" aria-hidden="true">
-        <span className="r-hero__scroll-copy"><strong>SCROLL TO EXPLORE</strong><small>Discover projects, skills &amp; milestones</small></span>
-        <span className="r-hero__scroll-line"><i /></span>
-      </div>
+      <a className="r-hero__scroll-cue" href="#r-content" aria-label="Scroll to explore the portfolio">
+        <span className="r-hero__scroll-copy"><strong>SCROLL TO EXPLORE</strong></span>
+        <span className="r-hero__scroll-line" aria-hidden="true"><i /></span>
+      </a>
     </section>
   );
 }
