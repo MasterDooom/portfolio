@@ -56,7 +56,7 @@ export default function Hero() {
           className="r-hero__card"
           style={{ opacity: cardOpacity, y: cardY, scale: cardScale }}
         >
-          <div className="r-hero__card-inner">
+          <motion.div className="r-hero__card-inner" initial={reduce?false:{opacity:0,y:14}} animate={{opacity:1,y:0}} transition={{duration:0.8,delay:0.12,ease:"easeOut"}}>
             <h1 className="r-hero__title">
               <span className="r-hero__title-block">{hero.titleLine1}</span>
               <span className="r-hero__title-block">
@@ -77,13 +77,13 @@ export default function Hero() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 
       {/* Scroll cue */}
       <div className="r-hero__scroll-cue" aria-hidden="true">
-        <span>Scroll</span>
+        <span>Scroll to explore</span>
         <span className="r-hero__scroll-line" />
       </div>
     </section>
