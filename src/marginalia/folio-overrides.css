@@ -217,3 +217,46 @@
   .r-hero__bg { transform:none !important; }
   .r-hero__bg-twilight,.r-hero__bg-vignette { animation:none!important; }
 }
+
+/* Final scroll cue: one compact, fully visible control centered in the hero. */
+.r-hero__scroll-cue {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 1.35rem !important;
+  transform: translateX(-50%) !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  min-height: 0;
+  padding: .68rem 1rem;
+  border: 1px solid rgba(224,194,143,.5);
+  border-radius: 999px;
+  background: rgba(31,23,34,.9);
+  box-shadow: none;
+  color: var(--r-gold-soft);
+  text-decoration: none;
+  white-space: nowrap;
+  animation: none !important;
+  backdrop-filter: none;
+  z-index: 5;
+}
+.r-hero__scroll-copy { display: block; }
+.r-hero__scroll-copy strong {
+  display: block;
+  font: 600 .68rem/1.2 var(--r-font-mono);
+  letter-spacing: .12em;
+  color: var(--r-gold-soft);
+}
+.r-hero__scroll-line { width: 12px; height: 15px; flex: 0 0 12px; }
+.r-hero__scroll-line:before { top: 0; left: 5px; width: 1px; height: 9px; animation: none; }
+.r-hero__scroll-line:after { left: 2px; top: 5px; width: 6px; height: 6px; border-width: 1px; animation: none; }
+.r-hero__scroll-line i { display: none; }
+.r-hero__scroll-cue:hover { border-color: var(--r-gold-soft); background: rgba(45,32,46,.98); }
+@media(max-width:600px) {
+  .r-hero__scroll-cue { bottom: .85rem !important; padding: .62rem .85rem; }
+  .r-hero__scroll-copy strong { font-size: .62rem; }
+}
