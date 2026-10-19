@@ -503,3 +503,13 @@
   .r-dossier-backdrop { padding: .7rem; }
   .r-dossier { max-height:90svh; }
 }
+
+.r-work__filters{display:none!important}
+.r-work__item--collection{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:2rem;align-items:center;margin-bottom:1.5rem}
+.r-work__item--collection .r-work__canvas{aspect-ratio:16/7}
+.r-work__item--collection .r-work__canvas-placeholder{background:radial-gradient(ellipse at 70% 35%,rgba(224,194,143,.23),transparent 38%),linear-gradient(140deg,#3c2b33,#201722 74%)}
+.r-medal-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;background:radial-gradient(ellipse at center,rgba(224,194,143,.12),transparent 65%),linear-gradient(145deg,#3c2b33,#201722)}
+.r-medal-placeholder span{color:var(--r-gold-soft);font:.7rem var(--r-font-mono);letter-spacing:.16em}
+.r-medal-placeholder small{color:var(--r-text-muted);font-size:.8rem}
+.r-work__item--collection .r-work__meta{padding:1rem}
+@media(max-width:760px){.r-work__item--collection{grid-template-columns:1fr;gap:1rem}.r-work__item--collection .r-work__canvas{aspect-ratio:4/3}}
