@@ -12,9 +12,9 @@ export const SITE = {
     email: "",
   },
   hero: {
-    titleLine1: "Beyond",
-    titleLine2Italic: "the milestone.",
-    folioLabel: "STUDENT FOLIO · NO. 01",
+    titleLine1: "Build",
+    titleLine2Italic: "what matters.",
+    folioLabel: "ENGINEERING PORTFOLIO · 2026",
     lede: <>Engineering, experiments, and things built to solve real problems. A work-in-progress archive of the thinking behind the code.</>,
     nav: [
       { label: "About", numeral: "I", href: "#about" },
@@ -25,8 +25,8 @@ export const SITE = {
       { label: "Close", numeral: "VI", href: "#contact" },
     ],
     topRight: [
-      { kind: "link", label: "Folio index", href: "#work" },
-      { kind: "cta", label: "Open the archive", href: "#work" },
+      { kind: "link", label: "Selected work", href: "#writing" },
+      { kind: "cta", label: "Explore projects", href: "#writing" },
     ],
   },
   about: {
