@@ -1,21 +1,25 @@
-# Content collection guide
+# Content and evidence guide
 
-The site is now organised as a scroll-led achievement archive. The stage art is original vector/typographic artwork, not evidence. Replace it with real photographs/documents as they are collected.
+The visual layout is ready for real content. Keep claims specific and verifiable.
 
-## Evidence to gather
-- **SASMO:** official certificate/result, exact year and category/level confirming the 8th rank.
-- **Tennis:** photograph of the actual district trophy, event name, tournament year and category/result.
-- **Hackathon:** event name, the exact selection stage, a redacted screenshot/PDF of the original selection email.
-- **Medals:** photographs of the actual medals and any award certificates; label each with its event and year.
-- **Projects:** choose 2–4 strongest projects and document the problem, your contribution, outcome and lesson.
-- **Timeline:** use verified dates and genuine turning points; do not invent chronology.
-- **Reflections:** one concrete challenge, what you did, what changed and what you would improve.
+## Achievement evidence to add
 
-## A useful structure for each achievement
+- **SASMO:** the official result/certificate confirming 8th place, year, and category or level.
+- **District tennis:** a photograph of the actual trophy, tournament name/year, and verified category/result.
+- **Hackathon:** event name, exact selection stage, and a redacted screenshot/PDF of the original selection email.
+- **Medal collection:** photographs of the actual medals, with each item labelled by event and year.
+
+## Project case notes
+
+- **Unmix:** add a screenshot of the working interface, a small pipeline diagram, and actual test/benchmark results. Do not claim performance that has not been measured.
+- **ReFlow:** separate the original concept from what has actually been implemented. Add a repository or demo link only when it is ready to share.
+
+## Suggested structure for each entry
+
 1. What happened?
-2. What was your specific contribution?
-3. What evidence verifies the claim?
-4. Why did it matter?
-5. What did you learn?
+2. What did I personally contribute?
+3. What evidence verifies it?
+4. What was difficult or surprising?
+5. What did I learn, and what would I change next time?
 
-Keep writing accurate and specific. Do not invent dates, rankings, event names or outcomes. Redact private contact details and unrelated email content before publishing any documents.
+Replace placeholders with your own specific experiences. Avoid unverified dates, rankings, event names, results, and private contact details. The illustrations in the page are design placeholders, not certificates or photos of real awards.
