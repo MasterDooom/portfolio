@@ -1,0 +1,38 @@
+:root {
+  --r-ivory: #f3ede3;
+  --r-ivory-soft: #e8dfd5;
+  --r-umber: #322431;
+  --r-umber-deep: #1b1420;
+  --r-venetian: #ad6254;
+  --r-gold: #bd925d;
+  --r-gold-soft: #e0c28f;
+  --r-teal: #81a5a1;
+  --r-chartreuse: #c4d5c4;
+  --r-chartreuse-glow: rgba(196,213,196,.22);
+  --r-bg: #201722;
+  --r-text: var(--r-ivory);
+  --r-text-soft: rgba(243,237,227,.78);
+  --r-text-muted: rgba(243,237,227,.52);
+  --r-font-display: "Instrument Serif", "Fraunces", Georgia, serif;
+  --r-font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --r-font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r-ease-out: cubic-bezier(.22,1,.36,1);
+  --r-ease-in-out: cubic-bezier(.65,0,.35,1);
+}
+html.lenis, html.lenis body { height: auto; }
+html.lenis-smooth { scroll-behavior: auto !important; }
+html.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+html.lenis-stopped { overflow: hidden; }
+.r-root {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--r-font-body);
+  color: var(--r-text);
+  background: var(--r-bg);
+  isolation: isolate;
+  overflow: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
