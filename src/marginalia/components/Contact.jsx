@@ -1,25 +1,6 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion,useReducedMotion } from "framer-motion";
 import ChapterHeader from "./ChapterHeader.jsx";
 import { SITE } from "../config.jsx";
 import "./Contact.css";
-
-export default function Contact() {
-  const reduce = useReducedMotion();
-  const { contact } = SITE;
-  return (
-    <section id="contact" className="r-contact" aria-label="The next chapter">
-      <div className="r-contact__container">
-        <ChapterHeader align="left" numeral={contact.numeral} label={contact.label} title={contact.title} lede={contact.lede} />
-        <motion.div className="r-next-note"
-          initial={reduce ? false : { opacity: 0, y: 22 }}
-          whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: .35 }}
-          transition={{ duration: .8, ease: [.22, 1, .36, 1] }}>
-          <span className="r-next-note__stamp">TO BE CONTINUED</span>
-          <p className="r-next-note__line">The next entry will be added when it has been <em>earned</em>.</p>
-          <a href="#hero" className="r-next-note__back">Return to the opening <span aria-hidden="true">↑</span></a>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
+const LINKS=[{label:"GitHub",value:"MasterDooom",href:"https://github.com/MasterDooom"},{label:"Portfolio source",value:"View repository",href:"https://github.com/MasterDooom/portfolio"},{label:"Projects",value:"Offgrid & Unmix",href:"#writing"}];
+export default function Contact(){const reduce=useReducedMotion();const {contact}=SITE;return <section id="contact" className="r-contact" aria-label="About and contact"><div className="r-contact__container"><ChapterHeader align="left" numeral={contact.numeral} label={contact.label} title={contact.title} lede={contact.lede}/><motion.div className="r-about-contact" initial={reduce?false:{opacity:0,y:18}} whileInView={reduce?undefined:{opacity:1,y:0}} viewport={{once:true,amount:.25}} transition={{duration:.65}}><div><span className="r-about-contact__eyebrow">A LITTLE ABOUT ME</span><p className="r-about-contact__bio">I'm Sambhav, a student developer interested in building useful software, exploring how systems work, and learning by shipping real projects.</p><p className="r-about-contact__note">Currently focused on Android development, audio signal processing, and thoughtful web experiences.</p></div><div><span className="r-about-contact__eyebrow">FIND ME ONLINE</span><ul>{LINKS.map(link=><li key={link.label}><a href={link.href} target={link.href.startsWith("http")?"_blank":undefined} rel={link.href.startsWith("http")?"noreferrer":undefined}><span>{link.label}</span><strong>{link.value}</strong><span aria-hidden="true">↗</span></a></li>)}</ul><p className="r-about-contact__note">For direct contact, use the contact details listed on my GitHub profile.</p></div></motion.div></div></section>}
