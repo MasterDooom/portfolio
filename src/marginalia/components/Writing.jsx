@@ -45,6 +45,9 @@ export default function Writing() {
                   <p className="r-writing__dek">{project.dek}</p>
                   <p className="r-writing__meta"><span>{project.category}</span><span aria-hidden="true">·</span><span>{project.status}</span></p>
                 </div>
+                <span className={`r-writing__visual r-writing__visual--${project.id}`} aria-hidden="true">
+                  <span /><span /><span /><span /><span />
+                </span>
                 <span className="r-writing__arrow" aria-hidden="true">↗</span>
               </button>
             </motion.li>
