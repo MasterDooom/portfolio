@@ -36,8 +36,8 @@ export default function Marginalia() {
       <Hero />
       <div id="r-content" />
       <About />
-      <Work />
       <Writing />
+      <Work />
       <Stack />
       <Press />
       <Contact />
