@@ -46,3 +46,13 @@
 @keyframes playhead-scan{0%{transform:translateX(-190px)}100%{transform:translateX(190px)}}
 @media(max-width:760px){.r-writing{padding:5rem 0}.r-writing__container{padding:0 1.15rem}.r-project-card{grid-template-columns:1fr}.r-project-card__art{min-height:230px;border-right:0;border-bottom:1px solid rgba(224,194,143,.12)}.r-project-art{max-height:250px}.r-project-card__body{padding:1.35rem}.r-project-dialog{max-height:calc(100dvh - 1rem)}.r-project-backdrop{padding:.5rem}}
 @media(prefers-reduced-motion:reduce){.network-lines,.node-glow,.network-node--animated,.audio-wave,.audio-playhead{animation:none!important}.node-glow{opacity:.65}}
+
+/* Readable interface typography: reserve the mono face for tiny metadata only. */
+.r-project-card__eyebrow,.r-project-card__contribution>span,.r-project-card__actions a,.r-project-card__actions button,.r-project-dialog__top,.r-project-dialog__subhead,.r-project-dialog__repo{font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;letter-spacing:.015em;font-weight:550}
+.r-project-card__actions a,.r-project-card__actions button,.r-project-dialog__repo{font-size:.84rem;letter-spacing:0}
+.r-project-dialog__tags li{display:inline-flex;align-items:center;gap:.5rem;padding:.42rem .65rem;border-radius:999px;border-color:rgba(224,194,143,.2);background:linear-gradient(135deg,rgba(224,194,143,.09),rgba(129,165,161,.06));color:#e8dfd5;font:500 .77rem/1.2 Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;letter-spacing:0}
+.r-tech-mark{display:inline-grid;place-items:center;width:1.35rem;height:1.35rem;border-radius:50%;background:linear-gradient(145deg,rgba(224,194,143,.24),rgba(129,165,161,.2));color:var(--r-gold-soft);font:700 .58rem Inter,"Segoe UI",sans-serif;letter-spacing:-.03em}
+.r-project-card__actions a,.r-project-card__actions button,.r-project-dialog__repo{border-radius:5px;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.r-project-card__actions button{background:rgba(243,237,227,.035)}
+.r-project-card__actions button:hover{background:rgba(129,165,161,.1);border-color:rgba(129,165,161,.6)}
+.r-project-card__actions a:hover,.r-project-dialog__repo:hover{background:#e9cfa0}
