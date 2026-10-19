@@ -1,0 +1,34 @@
+name: Import prepared portfolio source
+
+on:
+  push:
+    branches:
+      - redesign/beyond-the-milestone
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out redesign branch
+        uses: actions/checkout@v4
+        with:
+          ref: redesign/beyond-the-milestone
+      - name: Import editable source files
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f .portfolio-source-bundle.b64 ]; then
+            echo "No source bundle on this commit; nothing to import."
+            exit 0
+          fi
+          base64 --decode .portfolio-source-bundle.b64 | tar -xz
+          rm .portfolio-source-bundle.b64
+          rm .github/workflows/import-prepared-source.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Import Beyond the Milestone portfolio prototype"
+          git push origin HEAD:redesign/beyond-the-milestone
