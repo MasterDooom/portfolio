@@ -1,0 +1,11 @@
+.r-skip-link {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: .65rem 1rem;
+  color: var(--r-umber-deep);
+  background: var(--r-gold-soft);
+  font: 500 .85rem var(--r-font-mono);
+}
+.r-skip-link:focus { left: 1rem; top: 1rem; }
