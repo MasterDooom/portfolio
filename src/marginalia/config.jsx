@@ -1,0 +1,95 @@
+import React from "react";
+
+export const SITE = {
+  title: "Beyond the Milestone — Student Folio",
+  description: "An achievement-first student folio about practice, curiosity, and the work behind the milestones.",
+  themeColor: "#201722",
+  owner: {
+    name: "YOUR NAME",
+    initials: "YN",
+    role: "Student · Learner · Builder",
+    location: "",
+    email: "",
+  },
+  hero: {
+    titleLine1: "Beyond",
+    titleLine2Italic: "the milestone.",
+    folioLabel: "STUDENT FOLIO · NO. 01",
+    lede: <>A personal record of things worth remembering — the rank, the trophy, the selected idea, and the practice behind them.</>,
+    nav: [
+      { label: "Honours", numeral: "I", href: "#work" },
+      { label: "Projects", numeral: "II", href: "#writing" },
+      { label: "The process", numeral: "III", href: "#stack" },
+      { label: "Field notes", numeral: "IV", href: "#press" },
+      { label: "About", numeral: "V", href: "#about" },
+      { label: "Close", numeral: "VI", href: "#contact" },
+    ],
+    topRight: [
+      { kind: "link", label: "Folio index", href: "#work" },
+      { kind: "cta", label: "Open the archive", href: "#work" },
+    ],
+  },
+  about: {
+    numeral: "I",
+    label: "The intention",
+    title: <>A result is one frame of a much larger <em>story</em>.</>,
+    body: [
+      "This folio brings together a handful of academic, sporting, and creative milestones — and leaves space for the context that makes each one meaningful.",
+      "The aim is not to make every moment look perfect. It is to show what happened, what it took, and what I learned from it.",
+      "The entries are designed to hold real evidence: certificates, photographs, original notices, project links, and reflections. Where details are still missing, the folio says so.",
+    ],
+    signature: "— YOUR NAME",
+    signatureMeta: "Student folio · 2026",
+    stats: [
+      { num: "08TH", label: "SASMO", note: "year / category to add" },
+      { num: "DISTRICT", label: "Tennis", note: "event details to add" },
+      { num: "SELECTED", label: "Hackathon", note: "notice to add" },
+      { num: "ONGOING", label: "Medals", note: "collection archive" },
+    ],
+  },
+  work: {
+    numeral: "II",
+    label: "Honours & milestones",
+    title: <>Proof, practice, and the <em>in-between</em>.</>,
+    lede: "Choose an entry to open its dossier. Replace the illustrative artwork with the original certificate, trophy photograph, or redacted selection email before submission.",
+  },
+  writing: {
+    numeral: "III",
+    label: "Selected projects",
+    title: <>Ideas made <em>tangible</em>.</>,
+    lede: "A small selection of experiments and builds. Keep the description specific: the problem, your contribution, and what the current version can actually do.",
+    archiveHref: "#contact",
+  },
+  stack: {
+    numeral: "IV",
+    label: "The throughline",
+    title: <>What happens <em>between</em> the wins.</>,
+    lede: "A framework for turning milestones into a story. These are prompts to fill with real events and dates, not an invented timeline.",
+    countLabel: "reflection prompts",
+    countMeta: "add dates when verified",
+  },
+  press: {
+    numeral: "V",
+    label: "Field notes",
+    title: <>The work <em>stays</em>.</>,
+    lede: "The strongest reflection is specific. Use these questions to describe a real challenge, the choice you made, and what you carried forward.",
+  },
+  contact: {
+    numeral: "VI",
+    label: "The next chapter",
+    title: <>Still <em>in progress</em>.</>,
+    lede: "The archive is meant to grow as new work is finished and evidence is collected.",
+    workingHours: "",
+    workingHoursNote: "",
+  },
+  footer: {
+    line: "A personal archive of effort, evidence, and growth.",
+    typeCredit: "Instrument Serif",
+    techCredit: "Adapted from Marginalia · MIT License.",
+    links: [
+      { label: "Repository", href: "https://github.com/MasterDooom/portfolio" },
+      { label: "Back to opening", href: "#hero" },
+    ],
+  },
+  assets: { bg: "", figure: "" },
+};
