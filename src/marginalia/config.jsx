@@ -1,12 +1,12 @@
 import React from "react";
 
 export const SITE = {
-  title: "Beyond the Milestone — Student Folio",
-  description: "An achievement-first student folio about practice, curiosity, and the work behind the milestones.",
+  title: "Sambhav Tade — Portfolio",
+  description: "A portfolio of engineering projects, experiments, and milestones by Sambhav Tade.",
   themeColor: "#201722",
   owner: {
-    name: "YOUR NAME",
-    initials: "YN",
+    name: "Sambhav Tade",
+    initials: "ST",
     role: "Student · Learner · Builder",
     location: "",
     email: "",
@@ -15,7 +15,7 @@ export const SITE = {
     titleLine1: "Beyond",
     titleLine2Italic: "the milestone.",
     folioLabel: "STUDENT FOLIO · NO. 01",
-    lede: <>A personal record of things worth remembering — the rank, the trophy, the selected idea, and the practice behind them.</>,
+    lede: <>Engineering, experiments, and things built to solve real problems. A work-in-progress archive of the thinking behind the code.</>,
     nav: [
       { label: "Honours", numeral: "I", href: "#work" },
       { label: "Projects", numeral: "II", href: "#writing" },
@@ -32,13 +32,13 @@ export const SITE = {
   about: {
     numeral: "I",
     label: "The intention",
-    title: <>A result is one frame of a much larger <em>story</em>.</>,
+    title: <>Built by asking better <em>questions</em>.</>,
     body: [
-      "This folio brings together a handful of academic, sporting, and creative milestones — and leaves space for the context that makes each one meaningful.",
-      "The aim is not to make every moment look perfect. It is to show what happened, what it took, and what I learned from it.",
-      "The entries are designed to hold real evidence: certificates, photographs, original notices, project links, and reflections. Where details are still missing, the folio says so.",
+      "I build software, explore systems, and learn by making things work beyond the happy path.",
+      "This portfolio brings together selected projects and milestones, with room for the engineering decisions and unfinished edges behind each one.",
+      "Project write-ups distinguish implemented behaviour from work still in progress. Evidence and demos should do the talking, not inflated claims.",
     ],
-    signature: "— YOUR NAME",
+    signature: "— Sambhav Tade",
     signatureMeta: "Student folio · 2026",
     stats: [
       { num: "08TH", label: "SASMO", note: "year / category to add" },
@@ -51,13 +51,13 @@ export const SITE = {
     numeral: "II",
     label: "Honours & milestones",
     title: <>Proof, practice, and the <em>in-between</em>.</>,
-    lede: "Choose an entry to open its dossier. Replace the illustrative artwork with the original certificate, trophy photograph, or redacted selection email before submission.",
+    lede: "Open an entry for context and evidence. Milestones will be documented with original proof; project write-ups focus on what is built, how it works, and what remains.",
   },
   writing: {
     numeral: "III",
     label: "Selected projects",
     title: <>Ideas made <em>tangible</em>.</>,
-    lede: "A small selection of experiments and builds. Keep the description specific: the problem, your contribution, and what the current version can actually do.",
+    lede: "A small selection of systems and experiments, from offline communication to audio source separation. Each entry separates working behaviour from the next engineering challenge.",
     archiveHref: "#contact",
   },
   stack: {
@@ -83,7 +83,7 @@ export const SITE = {
     workingHoursNote: "",
   },
   footer: {
-    line: "A personal archive of effort, evidence, and growth.",
+    line: "Software, systems, experiments — still being built.",
     typeCredit: "Instrument Serif",
     techCredit: "Adapted from Marginalia · MIT License.",
     links: [
