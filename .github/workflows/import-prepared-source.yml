@@ -20,12 +20,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -f .portfolio-source-bundle.b64 ]; then
+          if [ ! -f .portfolio-source-bundle.xz.b64 ]; then
             echo "No source bundle on this commit; nothing to import."
             exit 0
           fi
-          base64 --decode .portfolio-source-bundle.b64 | tar -xz
-          rm .portfolio-source-bundle.b64
+          base64 --decode .portfolio-source-bundle.xz.b64 | tar -xJ
+          rm .portfolio-source-bundle.xz.b64
           rm .github/workflows/import-prepared-source.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
