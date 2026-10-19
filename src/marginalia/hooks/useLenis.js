@@ -18,6 +18,8 @@ export function useLenis() {
       touchMultiplier: 1.4,
     });
 
+    window.__portfolioLenis = lenis;
+
     let rafId;
     function raf(time) {
       lenis.raf(time);
@@ -27,6 +29,7 @@ export function useLenis() {
 
     return () => {
       cancelAnimationFrame(rafId);
+      if (window.__portfolioLenis === lenis) delete window.__portfolioLenis;
       lenis.destroy();
     };
   }, []);
