@@ -17,11 +17,11 @@ export const SITE = {
     folioLabel: "STUDENT FOLIO · NO. 01",
     lede: <>Engineering, experiments, and things built to solve real problems. A work-in-progress archive of the thinking behind the code.</>,
     nav: [
-      { label: "Honours", numeral: "I", href: "#work" },
+      { label: "About", numeral: "I", href: "#about" },
       { label: "Projects", numeral: "II", href: "#writing" },
-      { label: "The process", numeral: "III", href: "#stack" },
-      { label: "Field notes", numeral: "IV", href: "#press" },
-      { label: "About", numeral: "V", href: "#about" },
+      { label: "Honours", numeral: "III", href: "#work" },
+      { label: "The process", numeral: "IV", href: "#stack" },
+      { label: "Field notes", numeral: "V", href: "#press" },
       { label: "Close", numeral: "VI", href: "#contact" },
     ],
     topRight: [
