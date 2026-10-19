@@ -5,11 +5,10 @@ import "./ScrollIndex.css";
 const SECTIONS = [
   { id: "hero", numeral: "I", label: "Opening" },
   { id: "about", numeral: "II", label: "The intention" },
+  { id: "writing", numeral: "II", label: "Projects" },
   { id: "work", numeral: "III", label: "Honours" },
-  { id: "writing", numeral: "IV", label: "Projects" },
-  { id: "stack", numeral: "V", label: "The process" },
-  { id: "press", numeral: "VI", label: "Field notes" },
-  { id: "contact", numeral: "VII", label: "Next chapter" },
+  { id: "stack", numeral: "IV", label: "Tech skills" },
+  { id: "contact", numeral: "V", label: "About / Contact" },
 ];
 
 export default function ScrollIndex() {
@@ -22,7 +21,7 @@ export default function ScrollIndex() {
 
       // Find section currently in viewport center
       const targets = SECTIONS.map((s) => {
-        const el = document.getElementById(s.id) || document.querySelector(`section[aria-label]`);
+        const el = document.getElementById(s.id);
         if (!el) return { id: s.id, top: Infinity };
         const r = el.getBoundingClientRect();
         return { id: s.id, top: r.top };
