@@ -1,27 +1,42 @@
-# The Work Speaks — Personal Portfolio
+# Beyond the Milestone — Student Folio
 
-A responsive, editorial portfolio built around academic milestones, sport, ideas, and personal reflection. The design mixes warm paper surfaces with deep plum sections, coral/lilac/mint gradients, oversized geometric lettering, serif italics, and a few hand-drawn-style accents.
+An achievement-first portfolio for an English project, adapted from the MIT-licensed **Marginalia** React/Vite folio template. It retains a chapter-based layout, editorial typography, scroll motion, and reusable section components while replacing the template's designer résumé content with an honest student achievement narrative.
 
-## Live site
-https://masterdooom.github.io/portfolio/
+## Preview branch
 
-## Experience
-- A light, expressive hero with layered colour fields, a monogram graphic, a sticker-style handwritten note, and a clear scroll CTA.
-- An animated focus ribbon that introduces the main themes.
-- An achievement scrollytelling sequence: the sticky spotlight changes artwork as the matching story entry crosses the viewport focus band.
-- A spacious project log, a soft-lavender timeline, and a contrasting reflection section.
-- Mobile navigation, scroll progress, pointer-aware details on desktop, and observer-triggered reveals.
-- Responsive type and spacing, keyboard focus styles, and support for `prefers-reduced-motion`.
+The redesign is being staged on `redesign/marginalia-folio`. The existing live `main` site has not been replaced yet.
 
-## Files
-- `index.html` — page content and the four achievement compositions.
-- `preview.css` — unified design system, typography, responsive layouts, and motion.
-- `preview.js` — mobile nav, scroll progress, active-section states, achievement scrollytelling, and low-cost pointer interactions.
-- `CONTENT-GUIDE.md` — content/evidence checklist.
-- `DESIGN-NOTES.md` — design choices and implementation notes.
+## What the folio contains
 
-## Before submitting
-Replace the illustrative medal and trophy graphics with photographs of the real items, and add a redacted image of the original hackathon selection email. Add the SASMO certificate, exact competition year/category, and hackathon name once verified. Replace project and timeline placeholders with real examples. Do not publish unredacted email addresses, phone numbers, or private messages.
+- **Opening:** serif display typography, layered atmospheric colour, and a clear navigation index.
+- **Honours:** a filterable achievement gallery with detail dossiers for SASMO eighth place, a district tennis trophy, a hackathon selection notice, and the medal collection.
+- **Selected projects:** case notes for Unmix and ReFlow, with the current stage and evidence still to be added.
+- **The process:** a short evidence → effort → learning → next-step framework.
+- **Field notes:** reflection prompts that help turn a list of awards into an English portfolio.
+- **Closing chapter:** a clear end to the story without a fake contact form.
 
-## Deploy
-Push changes to `main`; GitHub Actions publishes `index.html`, `preview.css`, and `preview.js` via GitHub Pages.
+The achievement artwork is illustrative only. Before submission, replace it with genuine photographs or documents where appropriate. No event year, category, or result beyond the known facts is invented.
+
+## Edit the content
+
+- `src/marginalia/config.jsx` — headings, section copy, name placeholder, and navigation.
+- `src/marginalia/data/works.js` — achievement records, categories, dossier details, and evidence checklist.
+- `src/marginalia/data/writings.js` — selected projects.
+- `src/marginalia/data/stack.js` — the process/reflection framework.
+- `src/marginalia/folio-overrides.css` — the folio theme and responsive visual tuning.
+
+## Run locally
+
+Requires Node.js 22.12 or newer.
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+Vite builds to `dist/` with the `/portfolio/` base path for GitHub Pages. The branch has a build-validation workflow; the Pages deployment workflow publishes the build only when changes land on `main`.
+
+## Attribution
+
+Adapted from [Marginalia](https://github.com/uxderrick/marginalia) by Derrick Tsorme under the MIT License; the original license is preserved in `LICENSE`. The component structure and motion patterns are reused and adapted, not presented as an original-from-zero implementation.
