@@ -1,27 +1,4 @@
-// Selected projects. Keep claims aligned with what the current build demonstrates.
 export const WRITINGS = [
-  {
-    id: "offgrid",
-    numeral: "I",
-    title: "Offgrid",
-    category: "Android · Peer-to-peer systems",
-    status: "MVP prototype",
-    dek: "An offline-first Android messenger with a working two-emulator TCP demo and a longer-term mesh roadmap.",
-    detail: "Offgrid is an offline-first Android messaging MVP with Compose screens for nearby-device discovery, chat, and emergency SOS. The current default transport is a mockable transport interface backed by a real TCP socket demo between two emulator instances; extra nearby entries on a single emulator are explicitly simulated. A legacy Wi-Fi Direct + TCP implementation is preserved as a reference, while real multi-hop relay and a hardware mesh transport remain future work. The engineering focus is making the transport boundary clear and separating demonstrated behaviour from the intended mesh-network architecture.",
-    evidence: "Add a screen recording of the real two-emulator send/receive flow, a separate SOS demonstration, and screenshots of the app. Label the simulated nearby list and multi-hop hardware work accurately; do not present them as completed real-device mesh routing.",
-    tags: ["Android", "Kotlin", "TCP transport", "Offline-first"],
-    href: "https://github.com/MasterDooom/offgrid",
-  },
-  {
-    id: "unmix",
-    numeral: "II",
-    title: "Unmix",
-    category: "Audio research · Signal processing",
-    status: "In development",
-    dek: "An audio source-separation project exploring ICA, PCA whitening, and FastICA.",
-    detail: "Unmix explores how mixed audio can be separated into source signals. The current research direction includes PCA whitening, symmetric FastICA, synthetic mixtures, generated-audio demonstrations, and a web interface for mixing and separating tracks. Add real benchmarks and screenshots from the current build before presenting performance claims.",
-    evidence: "Add the repository, a concise pipeline diagram, screenshots of the working interface, and a small table showing tested inputs and results.",
-    tags: ["ICA / FastICA", "Signal processing", "Audio", "Research"],
-    href: "https://github.com/MasterDooom/unmix",
-  },
+{id:"offgrid",numeral:"I",title:"Offgrid",category:"Android · Offline communication",status:"MVP prototype",dek:"An offline-first Android messenger exploring device-to-device communication and emergency SOS.",detail:"Offgrid is an Android messaging prototype with Compose screens for nearby-device discovery, chat, and emergency SOS. Its current default transport supports a real TCP send/receive demo between two emulator instances. Nearby entries shown on a single emulator are simulated; the legacy Wi-Fi Direct implementation is reference code, while real multi-hop relay and hardware mesh transport remain future work.",contribution:"Built the Android interface and explored the transport boundary, including a working TCP socket demonstration between two emulator instances. The project separates demonstrated behaviour from its longer-term mesh-network direction.",tags:["Kotlin","Jetpack Compose","Android","TCP sockets"],href:"https://github.com/MasterDooom/offgrid"},
+{id:"unmix",numeral:"II",title:"Unmix",category:"Signal processing · Audio research",status:"In development",dek:"An audio source-separation project using PCA whitening and Independent Component Analysis.",detail:"Unmix explores separating mixed audio into source signals through PCA whitening and symmetric FastICA. The project includes audio preprocessing and I/O, separation metrics, synthetic experiments, generated-audio demos, and a React-based interface for mixing and unmixing tracks.",contribution:"Implemented core preprocessing and separation modules, evaluation metrics, audio handling, experiment scripts, and the web interface workflow. Results should be interpreted within the tested synthetic/demo setup; no broad real-world separation performance is claimed.",tags:["Python","NumPy / SciPy","FastICA / PCA","React","TypeScript","FastAPI"],href:"https://github.com/MasterDooom/unmix"}
 ];
