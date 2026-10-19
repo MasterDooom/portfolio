@@ -431,3 +431,19 @@
 @keyframes r-cue-arrive{from{opacity:0;transform:translate(50%,8px)}to{opacity:1;transform:translate(50%,0)}}
 @media(max-width:600px){.r-hero__scroll-cue{right:50%;bottom:.8rem;width:max-content;max-width:calc(100% - 2rem);padding:.6rem .8rem;gap:.65rem}.r-hero__scroll-copy small{font-size:.65rem}.r-hero__eyebrow{font-size:.59rem;letter-spacing:.1em}}
 @media(prefers-reduced-motion:reduce){.r-hero__card-inner,.r-hero__eyebrow,.r-hero__title,.r-hero__lede,.r-hero__nav-list,.r-hero__scroll-cue{animation:none;opacity:1;filter:none;transform:none}}
+
+/* Final viewport and scroll-cue calibration: simple, centered, never clipped. */
+.r-hero__card-anchor{width:100%;padding-inline:1.25rem}
+.r-hero__card{width:min(100%,42rem);max-width:calc(100vw - 2.5rem)}
+.r-hero__card-inner{width:100%;padding:clamp(1.5rem,3vw,2.8rem)}
+.r-hero__scroll-cue{position:absolute;right:50%;bottom:1.25rem;left:auto;transform:translateX(50%);display:inline-flex;flex-direction:row;align-items:center;justify-content:center;gap:.7rem;width:auto;max-width:calc(100vw - 2rem);min-height:0;padding:.65rem 1rem;border:1px solid rgba(224,194,143,.36);border-radius:999px;background:rgba(31,23,34,.72);box-shadow:none;backdrop-filter:blur(8px);white-space:nowrap;animation:none}
+.r-hero__scroll-copy strong{font:600 .68rem/1.2 var(--r-font-mono);letter-spacing:.11em;color:var(--r-gold-soft)}
+.r-hero__scroll-copy small{display:none}
+.r-hero__scroll-line{width:12px;height:17px;flex:0 0 12px;position:relative}
+.r-hero__scroll-line:before{left:5px;top:0;width:1.5px;height:10px;transform:none}
+.r-hero__scroll-line:after{left:2px;top:5px;width:6px;height:6px;border-width:1.5px}
+.r-hero__scroll-line i{display:none}
+@media(min-width:1100px){.r-hero__card{width:min(42rem,calc(100vw - 4rem))}.r-hero__title{font-size:clamp(4rem,5.3vw,6.3rem)}}
+@media(max-height:800px) and (min-width:700px){.r-hero{min-height:100svh;height:100svh}.r-hero__card-inner{padding:clamp(1.3rem,3vh,2rem)}.r-hero__title{font-size:clamp(3.3rem,5.2vw,5.2rem)}.r-hero__lede{margin-block:.85rem}.r-hero__nav-list{margin-top:1rem}}
+@media(max-width:600px){.r-hero__card-anchor{padding-inline:.75rem}.r-hero__card{max-width:calc(100vw - 1.5rem)}.r-hero__scroll-cue{bottom:.8rem;padding:.6rem .85rem}.r-hero__scroll-copy strong{font-size:.62rem}}
+@media(prefers-reduced-motion:reduce){.r-hero__scroll-line:before,.r-hero__scroll-line:after{animation:none}}
