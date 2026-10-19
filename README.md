@@ -1,29 +1,21 @@
-# Sambhav Tade — Portfolio
+# Sambhav Tade — Engineering Portfolio
 
-A project-led engineering portfolio adapted from the MIT-licensed **Marginalia** React/Vite folio template. It keeps the template's chapter-based layout, editorial typography, scroll motion, and reusable section components while making the content specific to real projects, evidence, and milestones.
+A project-led portfolio adapted from the MIT-licensed **Marginalia** React/Vite template. It keeps the editorial typography and restrained motion while making the projects and navigation easier to understand.
 
-## Preview branch
+## Sections
 
-The redesign is being staged on `redesign/marginalia-folio`. The existing live `main` site has not been replaced yet.
+- **Opening & about:** a concise introduction and direct path to the work.
+- **Selected projects:** Offgrid and Unmix, with custom animated network/audio visuals, plain-language summaries, contributions, technology tags, and direct GitHub links.
+- **Honours & milestones:** medal collection first, followed by SASMO, tennis, and hackathon milestones. The collection currently uses a placeholder until a real photograph is supplied.
+- **Technical toolkit:** languages, frameworks, engineering concepts, and tools connected to projects.
+- **About & contact:** a short introduction and direct profile/repository links.
 
-## What the folio contains
+## Project accuracy
 
-- **Opening:** serif display typography, layered atmospheric colour, and a clear navigation index.
-- **Honours:** a filterable achievement gallery with detail dossiers for SASMO eighth place, a district tennis trophy, a hackathon selection notice, and the medal collection.
-- **Selected projects:** Offgrid (offline Android communication) and Unmix (audio source separation), with implementation status and evidence stated honestly.
-- **The process:** a short evidence → effort → learning → next-step framework.
-- **Field notes:** reflection prompts that help turn a list of awards into an English portfolio.
-- **Closing chapter:** a clear end to the story without a fake contact form.
+- **Offgrid:** the current default transport supports a real TCP send/receive demo between two emulator instances. Nearby entries shown on a single emulator are simulated; real multi-hop relay and hardware mesh transport remain future work.
+- **Unmix:** audio source-separation exploration using PCA whitening and symmetric FastICA. No broad real-world performance claim is made.
 
-The achievement artwork is illustrative only. Before submission, replace it with genuine photographs or documents where appropriate. No event year, category, or result beyond the known facts is invented.
-
-## Edit the content
-
-- `src/marginalia/config.jsx` — identity, headings, section copy, and navigation.
-- `src/marginalia/data/works.js` — achievement records, categories, dossier details, and evidence checklist.
-- `src/marginalia/data/writings.js` — selected projects.
-- `src/marginalia/data/stack.js` — the process/reflection framework.
-- `src/marginalia/folio-overrides.css` — the folio theme and responsive visual tuning.
+Illustrative project visuals are conceptual UI artwork, not live device telemetry or measured audio results. Achievement details are kept conservative where dates or event categories need confirmation.
 
 ## Run locally
 
@@ -35,8 +27,4 @@ npm run dev
 npm run build
 ```
 
-Vite builds to `dist/` with the `/portfolio/` base path for GitHub Pages. The branch has a build-validation workflow; the Pages deployment workflow publishes the build only when changes land on `main`.
-
-## Attribution
-
-Adapted from [Marginalia](https://github.com/uxderrick/marginalia) by Derrick Tsorme under the MIT License; the original license is preserved in `LICENSE`. The component structure and motion patterns are reused and adapted, not presented as an original-from-zero implementation.
+Vite builds to `dist/` with the `/portfolio/` base path for GitHub Pages. The redesign is staged on `redesign/marginalia-folio`; merge the pull request only after a fresh build and desktop/mobile visual QA.
