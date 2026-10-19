@@ -1,6 +1,3 @@
-@import "./marginalia/tokens.css";
-@import "./marginalia/folio-overrides.css";
-
 *,
 *::before,
 *::after { box-sizing: border-box; }
