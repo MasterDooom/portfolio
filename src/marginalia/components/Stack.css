@@ -216,3 +216,62 @@
 .r-toolkit__identity--typescript .r-toolkit__mark{color:#91b9ee;background:linear-gradient(135deg,rgba(49,108,184,.22),rgba(129,165,161,.08))}
 .r-toolkit__name{color:var(--r-ivory);font:550 .9rem/1.35 Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 .r-toolkit__group li small{font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:.75rem;letter-spacing:0}
+
+/* Toolkit refresh — adapted locally from Aceternity's spotlight, glowing-card and hover-card patterns. */
+.r-stack{background:radial-gradient(ellipse at 14% 30%,rgba(93,61,84,.2),transparent 38%),radial-gradient(ellipse at 92% 68%,rgba(64,112,115,.09),transparent 34%)}
+.r-toolkit-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.5rem,4vw,4rem);align-items:center;margin:0 0 2.6rem;padding:clamp(1.2rem,3vw,2rem);border:1px solid rgba(224,194,143,.2);border-radius:12px;background:linear-gradient(115deg,rgba(48,33,48,.88),rgba(27,25,38,.72));box-shadow:0 24px 80px rgba(0,0,0,.12);overflow:hidden}
+.r-toolkit-intro__eyebrow{font:600 .65rem Inter,"Segoe UI",sans-serif;letter-spacing:.16em;color:#d9b77e}
+.r-toolkit-intro h3{max-width:16ch;margin:1rem 0 .75rem;font:500 clamp(1.8rem,3vw,2.6rem)/1.08 var(--r-font-display);color:var(--r-ivory);letter-spacing:-.025em}
+.r-toolkit-intro h3 em{color:#d9b77e;font-weight:400}
+.r-toolkit-intro p{max-width:40ch;margin:0;color:var(--r-text-soft);font:400 .92rem/1.7 Inter,"Segoe UI",sans-serif}
+.r-toolkit-visual{position:relative;min-height:230px;overflow:hidden;border:1px solid rgba(224,194,143,.14);border-radius:9px;background:radial-gradient(ellipse at 54% 50%,rgba(119,83,129,.18),transparent 58%),linear-gradient(145deg,rgba(17,17,27,.7),rgba(38,28,43,.6));color:rgba(224,194,143,.52)}
+.r-toolkit-visual__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(224,194,143,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(224,194,143,.055) 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent)}
+.r-toolkit-visual__lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.r-toolkit-visual__signal{stroke:#8ac9c4;stroke-dasharray:8 10;animation:r-toolkit-dash 8s linear infinite}
+.r-toolkit-visual__node{position:absolute;display:flex;align-items:center;gap:.5rem;padding:.45rem .55rem;border:1px solid rgba(224,194,143,.22);border-radius:7px;background:rgba(32,23,34,.94);box-shadow:0 6px 25px rgba(0,0,0,.18);animation:r-toolkit-float 6s ease-in-out infinite}
+.r-toolkit-visual__node b{display:grid;place-items:center;min-width:1.6rem;height:1.6rem;border-radius:5px;background:rgba(224,194,143,.12);color:#e4c995;font:700 .65rem Inter,sans-serif}
+.r-toolkit-visual__node span{font:500 .62rem Inter,"Segoe UI",sans-serif;color:#d0c4d0;white-space:nowrap}
+.r-toolkit-visual__node--python{left:5%;top:38%;animation-delay:-1s}
+.r-toolkit-visual__node--kotlin{left:31%;top:12%;animation-delay:-3s}
+.r-toolkit-visual__node--react{left:65%;top:37%;animation-delay:-2s}
+.r-toolkit-visual__node--fastapi{left:48%;bottom:15%;animation-delay:-4s}
+.r-toolkit-visual__node--core{left:38%;top:43%;display:grid;gap:.2rem;text-align:center;border-color:rgba(138,201,196,.38);box-shadow:0 0 24px rgba(138,201,196,.08)}
+.r-toolkit-visual__node--core b{margin:auto;background:rgba(138,201,196,.12);color:#9bd7d1}
+.r-toolkit-visual__node--core span{font-size:.56rem}
+.r-toolkit-visual__core-dot,.r-toolkit-project__dot{width:6px;height:6px;border-radius:50%;background:#91d5cf;box-shadow:0 0 12px rgba(145,213,207,.75)}
+.r-toolkit-visual__caption{position:absolute;left:1rem;right:1rem;bottom:.75rem;display:flex;justify-content:space-between;font:500 .55rem Inter,"Segoe UI",sans-serif;letter-spacing:.1em;color:rgba(224,194,143,.62)}
+.r-toolkit{gap:1rem}
+.r-toolkit__group{position:relative;isolation:isolate;overflow:hidden;padding:1.2rem 1.35rem 1.1rem;border:1px solid rgba(224,194,143,.16);border-radius:10px;background:linear-gradient(145deg,rgba(52,36,52,.76),rgba(24,21,32,.86));transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.r-toolkit__group:before{position:absolute;z-index:-1;inset:0;content:"";opacity:0;background:radial-gradient(280px circle at var(--spot-x,50%) var(--spot-y,0%),rgba(224,194,143,.11),transparent 65%);transition:opacity .25s ease}
+.r-toolkit__group:after{position:absolute;left:0;right:0;top:0;height:1px;content:"";background:linear-gradient(90deg,transparent,rgba(224,194,143,.7),rgba(138,201,196,.5),transparent);transform:scaleX(.25);transform-origin:left;transition:transform .35s ease}
+.r-toolkit__group:hover,.r-toolkit__group:focus-within{transform:translateY(-3px);border-color:rgba(224,194,143,.35);box-shadow:0 14px 35px rgba(0,0,0,.15)}
+.r-toolkit__group:hover:before,.r-toolkit__group:focus-within:before{opacity:1}
+.r-toolkit__group:hover:after,.r-toolkit__group:focus-within:after{transform:scaleX(1)}
+.r-toolkit__group--teal:after{background:linear-gradient(90deg,transparent,#8ac9c4,transparent)}
+.r-toolkit__group--violet:after{background:linear-gradient(90deg,transparent,#b79add,transparent)}
+.r-toolkit__group-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.85rem;color:var(--r-text-muted);font:500 .58rem Inter,"Segoe UI",sans-serif;letter-spacing:.12em}
+.r-toolkit__group-orbit{width:1.2rem;height:1.2rem;border:1px solid rgba(224,194,143,.3);border-radius:50%;position:relative}
+.r-toolkit__group-orbit:after{position:absolute;content:"";width:.32rem;height:.32rem;left:50%;top:-.13rem;transform:translateX(-50%);border-radius:50%;background:#d9b77e;box-shadow:0 0 9px rgba(217,183,126,.6)}
+.r-toolkit__group h3{font:600 .74rem Inter,"Segoe UI",sans-serif;letter-spacing:.12em;margin:0 0 .65rem}
+.r-toolkit__group ul{margin:0}
+.r-toolkit__group li{padding:.85rem 0;border-top:1px solid rgba(243,237,227,.08)}
+.r-toolkit__identity{gap:.75rem}
+.r-toolkit__mark{width:2.2rem;flex-basis:2.2rem;height:2.2rem;border-radius:8px}
+.r-toolkit__name{font-size:.9rem}
+.r-toolkit__group li small{font-size:.76rem;line-height:1.5}
+.r-toolkit-projects{display:grid;grid-template-columns:auto repeat(2,minmax(0,1fr));align-items:center;gap:.75rem;margin-top:1.2rem;padding:1rem 1.2rem;border:1px solid rgba(224,194,143,.15);border-radius:10px;background:rgba(22,19,29,.45)}
+.r-toolkit-projects__label{font:600 .6rem Inter,"Segoe UI",sans-serif;letter-spacing:.13em;color:var(--r-gold-soft)}
+.r-toolkit-project{display:flex;align-items:center;gap:.7rem;min-width:0;padding:.65rem .75rem;border:1px solid rgba(224,194,143,.12);border-radius:7px;text-decoration:none;background:rgba(255,255,255,.015);transition:background .2s,border-color .2s}
+.r-toolkit-project:hover{background:rgba(138,201,196,.07);border-color:rgba(138,201,196,.35)}
+.r-toolkit-project--violet:hover{background:rgba(183,154,221,.08);border-color:rgba(183,154,221,.35)}
+.r-toolkit-project__dot{flex:0 0 6px}
+.r-toolkit-project--violet .r-toolkit-project__dot{background:#b79add;box-shadow:0 0 12px rgba(183,154,221,.65)}
+.r-toolkit-project strong,.r-toolkit-project small{display:block}
+.r-toolkit-project strong{color:var(--r-ivory);font:600 .8rem Inter,"Segoe UI",sans-serif}
+.r-toolkit-project small{margin-top:.15rem;color:var(--r-text-muted);font:400 .68rem/1.4 Inter,"Segoe UI",sans-serif}
+.r-toolkit-project__arrow{margin-left:auto;color:var(--r-gold-soft)}
+.r-stack__note{font-family:Inter,"Segoe UI",sans-serif;font-size:.76rem}
+@keyframes r-toolkit-dash{to{stroke-dashoffset:-144}}
+@keyframes r-toolkit-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media(max-width:760px){.r-toolkit-intro{grid-template-columns:1fr}.r-toolkit-visual{min-height:200px}.r-toolkit-projects{grid-template-columns:1fr}.r-toolkit-projects__label{padding-bottom:.2rem}}
+@media(prefers-reduced-motion:reduce){.r-toolkit-visual__signal,.r-toolkit-visual__node{animation:none}.r-toolkit__group,.r-toolkit__group:before,.r-toolkit__group:after{transition:none}}
