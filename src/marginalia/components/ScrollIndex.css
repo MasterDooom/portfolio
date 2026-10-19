@@ -109,3 +109,15 @@
     transition: none;
   }
 }
+
+/* The floating index must never sit on top of project copy at normal desktop widths. */
+@media (max-width: 1800px) {
+  .r-index { right: .65rem; padding-inline: .2rem; }
+  .r-index__link { gap: .35rem; padding-inline: .25rem; letter-spacing: .1em; }
+  .r-index__rule { width: 12px; }
+  .r-index__item.is-active .r-index__rule,
+  .r-index__link:hover .r-index__rule { width: 18px; }
+}
+@media (max-width: 1500px) {
+  .r-index { display: none; }
+}
