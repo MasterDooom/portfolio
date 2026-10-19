@@ -1,25 +1,23 @@
-# Design notes — The Work Speaks
+# Design notes — Beyond the Milestone
 
-## Art direction
-- Editorial student portfolio: warm paper (#f7f0e8), deep plum (#251630), and merging coral, lilac, mint, and butter accents.
-- Syne is used for oversized, decisive display typography; DM Serif Display Italic adds contrast; Manrope carries body copy; IBM Plex Mono is reserved for metadata; Caveat and a small Comic Sans note provide controlled hand-written/playful moments.
-- Large type, generous space, restrained color fields, carefully framed achievements, and section-to-section contrast are the main visual devices.
-- The hero, achievement spotlight, and section backgrounds use layered CSS gradients rather than WebGL or a continuous canvas renderer.
+## Direction
 
-## Achievement experience
-The four achievement entries form a scrollytelling sequence. A sticky spotlight shows an original typographic/vector composition while the story entry advances. IntersectionObserver switches the artwork when a chapter crosses the central focus band.
+The design is a student folio / small exhibition catalogue, rather than a developer résumé or a stack of generic cards. It uses Instrument Serif and Fraunces for expressive display type, Inter for body text, and Geist Mono for small folio metadata. The palette centres on aubergine ink, warm ivory, muted copper, and soft sage. Section backgrounds shift gently in tone instead of relying on an animated video or heavy WebGL scene.
 
-## Motion, accessibility, performance
-- Observer-triggered reveals, headline clipping, a moving theme ribbon, subtle orbital shapes, and state changes on the spotlight and timeline.
-- Scroll progress uses one requestAnimationFrame-coalesced scroll handler.
-- Pointer-following details run only on fine pointers and are disabled when reduced motion is requested.
-- No smooth-scroll hijacking; the site honours `prefers-reduced-motion` and leaves content readable without JavaScript.
+## Existing foundation, adapted
 
-## References consulted
-- Shutterkif OSS reference: https://github.com/shutterkif-oss/shutterkif-oss.github.io
-- MotionFolio open-source starter: https://github.com/zickrian/motionfolio
-- Awwwards creative portfolio inspiration: https://www.awwwards.com/websites/single-page-1/
-- MDN Intersection Observer: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-- GSAP performance notes: https://github.com/sam-u-p/gsap-effects/blob/main/docs/performance.md
+- **Primary source:** [Marginalia](https://github.com/uxderrick/marginalia), an MIT-licensed React/Vite portfolio template. Its chapter headers, scroll index, Hero, About, Work, Writing, Stack, and footer components are reused and adapted. The original background-painting assets are intentionally not loaded; a lightweight CSS colour field is used instead.
+- **Motion and scroll:** Framer Motion for component-level entrances and dialogs; Lenis for optional smooth scrolling. The app respects `prefers-reduced-motion`.
+- **Achievement UX:** the achievement gallery filters by Academic, Sport, Innovation, and Collection. Each card opens a keyboard-dismissible dossier that explicitly calls out evidence to add. Project rows open separate case notes.
+- **Content truth:** no exact event year, SASMO category, tennis tournament name, or hackathon name is invented. The design distinguishes the real claim from the evidence still needed.
 
-These references informed broad layout and interaction principles. The site uses its own HTML/CSS artwork and lightweight JavaScript rather than copying another portfolio's source or assets.
+## References used for direction and component research
+
+- [Type Garden](https://type-garden.vercel.app/) — type experiments and expressive title composition.
+- [Awesome Web Components](https://github.com/saadpasta/awesome-web-components) — component and interaction inspiration; not treated as a dependency.
+- [Shutterkif OSS folio](https://github.com/shutterkif-oss/shutterkif-oss.github.io) — cinematic section pacing and strong title scale, visual reference only.
+- [MotionFolio](https://github.com/zickrian/motionfolio) — compared as another MIT React/Vite/GSAP starter; not copied into this build.
+- [Google Stitch](https://stitch.withgoogle.com/) and [Figma](https://www.figma.com/) — design-first iteration references for hierarchy, spacing, and responsive states.
+- [MDN Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) — observer-driven viewport behaviour.
+
+The page is still a draft: replace the name placeholder and add genuine evidence images, exact event details, project screenshots, and a few real reflections before final submission.
