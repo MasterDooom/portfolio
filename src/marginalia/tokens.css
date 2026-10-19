@@ -32,7 +32,6 @@ html.lenis-stopped { overflow: hidden; }
   color: var(--r-text);
   background: var(--r-bg);
   isolation: isolate;
-  overflow: clip;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
