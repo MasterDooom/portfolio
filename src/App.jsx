@@ -7,6 +7,9 @@ import Work from "./marginalia/components/Work.jsx";
 import Stack from "./marginalia/components/Stack.jsx";
 import Contact from "./marginalia/components/Contact.jsx";
 import Footer from "./marginalia/components/Footer.jsx";
+import "./marginalia/tokens.css";
+import "./marginalia/Marginalia.css";
+import "./marginalia/folio-overrides.css";
 import "./portfolio-pages.css";
 
 const PAGES = [
