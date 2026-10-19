@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import Hero from "./marginalia/components/Hero.jsx";
-import About from "./marginalia/components/About.jsx";
 import Intro from "./marginalia/components/Intro.jsx";
 import About from "./marginalia/components/About.jsx";
 import Writing from "./marginalia/components/Writing.jsx";
