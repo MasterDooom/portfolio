@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import Marginalia from "./marginalia/Marginalia.jsx";
+import Hero from "./marginalia/components/Hero.jsx";
+import About from "./marginalia/components/About.jsx";
 import Intro from "./marginalia/components/Intro.jsx";
 import About from "./marginalia/components/About.jsx";
 import Writing from "./marginalia/components/Writing.jsx";
@@ -7,7 +8,6 @@ import Work from "./marginalia/components/Work.jsx";
 import Stack from "./marginalia/components/Stack.jsx";
 import Contact from "./marginalia/components/Contact.jsx";
 import Footer from "./marginalia/components/Footer.jsx";
-import Hero from "./marginalia/components/Hero.jsx";
 import "./portfolio-pages.css";
 
 const PAGES = [
@@ -59,8 +59,8 @@ export default function App() {
   return <>
     <div className="portfolio-shell">
       {page !== "about" && <PageNav page={page} />}
-      {page === "about" && <><Marginalia /></>}
-      {page === "projects" && <><PageNav page={page} /><main className="portfolio-page portfolio-page--projects"><PageHeading page={page}/><Writing /></main><Footer /></>}
+      {page === "about" && <><Hero /><About /><Footer /></>}
+      {page === "projects" && <><main className="portfolio-page portfolio-page--projects"><PageHeading page={page}/><Writing /></main><Footer /></>}
       {page === "honours" && <><main className="portfolio-page portfolio-page--honours"><PageHeading page={page}/><Work /></main><Footer /></>}
       {page === "tech-stack" && <><main className="portfolio-page portfolio-page--stack"><PageHeading page={page}/><Stack /></main><Footer /></>}
       {page === "contact" && <><main className="portfolio-page portfolio-page--contact"><PageHeading page={page}/><Contact /></main><Footer /></>}
