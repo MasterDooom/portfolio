@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "./tokens.css";
 import "./Marginalia.css";
-import "./folio-overrides.css";
 import { useLenis } from "./hooks/useLenis.js";
 import { SITE } from "./config.jsx";
 import Hero from "./components/Hero.jsx";
@@ -13,6 +12,7 @@ import Press from "./components/Press.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollIndex from "./components/ScrollIndex.jsx";
+import "./folio-overrides.css";
 
 export default function Marginalia() {
   useLenis();
