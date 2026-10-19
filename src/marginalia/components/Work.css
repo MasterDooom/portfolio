@@ -513,3 +513,33 @@
 .r-medal-placeholder small{color:var(--r-text-muted);font-size:.8rem}
 .r-work__item--collection .r-work__meta{padding:1rem}
 @media(max-width:760px){.r-work__item--collection{grid-template-columns:1fr;gap:1rem}.r-work__item--collection .r-work__canvas{aspect-ratio:4/3}}
+
+
+/* Real achievement photos: preserve each original aspect ratio and never crop evidence. */
+.r-work__canvas:has(.r-work__photo) {
+  aspect-ratio: auto !important;
+  height: auto;
+  background: #241b28;
+}
+.r-work__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: contain;
+  object-position: center;
+  background: #241b28;
+  transition: transform 600ms var(--r-ease-out);
+}
+.r-work__frame:hover .r-work__photo { transform: scale(1.015); }
+.r-work__item--collection .r-work__canvas:has(.r-work__photo) { aspect-ratio: auto !important; }
+.r-dossier__photo {
+  display: block;
+  width: 100%;
+  max-height: 48svh;
+  margin: 1.25rem 0;
+  object-fit: contain;
+  object-position: center;
+  background: rgba(10,7,18,.45);
+  border: 1px solid rgba(224,194,143,.22);
+}
