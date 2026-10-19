@@ -2,6 +2,12 @@
 
 A project-led portfolio adapted from the MIT-licensed **Marginalia** React/Vite template. It keeps the editorial typography and restrained motion while making the projects and navigation easier to understand.
 
+## Live website
+
+**Visit the portfolio:** https://masterdooom.github.io/portfolio/
+
+No installation is needed to view the site. The local setup instructions below are only for development.
+
 ## Sections
 
 - **Opening & about:** a concise introduction and direct path to the work.
@@ -27,4 +33,4 @@ npm run dev
 npm run build
 ```
 
-Vite builds to `dist/` with the `/portfolio/` base path for GitHub Pages. The redesign is staged on `redesign/marginalia-folio`; merge the pull request only after a fresh build and desktop/mobile visual QA.
+Vite builds to `dist/` with the `/portfolio/` base path for GitHub Pages. The site is deployed to GitHub Pages at the link above.
