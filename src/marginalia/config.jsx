@@ -48,13 +48,13 @@ export const SITE = {
     ],
   },
   work: {
-    numeral: "II",
+    numeral: "III",
     label: "Honours & milestones",
     title: <>Proof, practice, and the <em>in-between</em>.</>,
     lede: "Open an entry for context and evidence. Milestones will be documented with original proof; project write-ups focus on what is built, how it works, and what remains.",
   },
   writing: {
-    numeral: "III",
+    numeral: "II",
     label: "Selected projects",
     title: <>Ideas made <em>tangible</em>.</>,
     lede: "A small selection of systems and experiments, from offline communication to audio source separation. Each entry separates working behaviour from the next engineering challenge.",
