@@ -205,3 +205,14 @@
 .r-toolkit__group li small{max-width:54%;color:var(--r-text-muted);font-size:.72rem;line-height:1.5;text-align:right}
 .r-stack__note{margin-top:1.3rem;color:var(--r-text-muted);font-size:.78rem;line-height:1.6}
 @media(max-width:700px){.r-toolkit{grid-template-columns:1fr}.r-toolkit__group li{align-items:flex-start;flex-direction:column;gap:.25rem}.r-toolkit__group li small{max-width:none;text-align:left}}
+
+/* Technology chips: soft glass, restrained accent marks, high legibility. */
+.r-toolkit__group li{align-items:center}
+.r-toolkit__identity{display:flex;align-items:center;gap:.7rem;min-width:0}
+.r-toolkit__mark{display:grid;place-items:center;flex:0 0 2rem;height:2rem;border:1px solid rgba(224,194,143,.25);border-radius:9px;background:linear-gradient(145deg,rgba(224,194,143,.14),rgba(129,165,161,.1));color:var(--r-gold-soft);font:700 .72rem Inter,"Segoe UI",sans-serif;box-shadow:inset 0 1px rgba(255,255,255,.04)}
+.r-toolkit__identity--python .r-toolkit__mark{color:#8fb8d8;background:linear-gradient(135deg,rgba(72,119,168,.2),rgba(224,194,143,.1))}
+.r-toolkit__identity--kotlin .r-toolkit__mark{color:#c6a5ee;background:linear-gradient(135deg,rgba(126,83,181,.2),rgba(224,194,143,.08))}
+.r-toolkit__identity--react .r-toolkit__mark{color:#7bd7e5;background:linear-gradient(135deg,rgba(52,160,184,.2),rgba(129,165,161,.08));font-size:1rem}
+.r-toolkit__identity--typescript .r-toolkit__mark{color:#91b9ee;background:linear-gradient(135deg,rgba(49,108,184,.22),rgba(129,165,161,.08))}
+.r-toolkit__name{color:var(--r-ivory);font:550 .9rem/1.35 Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.r-toolkit__group li small{font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:.75rem;letter-spacing:0}
